@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/colorPrimary">
+
+    <item
+        android:drawable="@drawable/button_pressed2"
+        android:state_pressed="true" />
+    <item
+        android:drawable="@drawable/button_unpressed2"
+        android:state_pressed="false" />
+    <item android:drawable="@drawable/button_unpressed2" />
+
+</ripple>

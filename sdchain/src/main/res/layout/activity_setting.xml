@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.activity.SettingActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space style="@style/space_10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!--account safe-->
+
+                <LinearLayout
+                    android:id="@+id/changeLoginPwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:background="@drawable/selector_item"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen10">
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/info567"
+                        android:textSize="@dimen/text_16" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen17">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_tonext" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginLeft="@dimen/dimen10"
+                    android:layout_marginRight="@dimen/dimen0" />
+
+                <!--about us-->
+                <LinearLayout
+                    android:id="@+id/aboutUs"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:background="@drawable/selector_item"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen10">
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/info569"
+                        android:textSize="@dimen/text_16" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen17">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_tonext" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

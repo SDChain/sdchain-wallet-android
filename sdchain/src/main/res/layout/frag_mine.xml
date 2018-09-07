@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg"
+    android:clickable="true">
+
+    <include layout="@layout/title_toolbar_no_back"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space style="@style/space_10"/>
+
+            <!--content-->
+            <LinearLayout
+                android:id="@+id/mine_content"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen100"
+                android:background="@drawable/selector_item"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="@dimen/dimen100"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dimen10">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_userpic"
+                        android:transitionName="touxiang"/>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <android.support.v4.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:id="@+id/userName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="bottom"
+                            android:text="钱*"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_16"/>
+
+                        <TextView
+                            android:id="@+id/userPhone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="139****3462"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_16"/>
+
+                        <android.support.v4.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="0dip"
+                            android:layout_weight="1"/>
+
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/dimen30">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_code"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen17">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_tonext"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Space style="@style/space_10"/>
+
+            <View
+                style="@style/LineStyle"
+                android:layout_marginLeft="@dimen/dimen0"
+                android:layout_marginRight="@dimen/dimen0"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!--wallet address-->
+                <LinearLayout
+                    android:id="@+id/mine_wallet_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:background="@drawable/selector_item"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen15">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_mine_wallet_address"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/info12"
+                        android:textSize="@dimen/text_16"/>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen17">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_tonext"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginLeft="@dimen/dimen20"
+                    android:layout_marginRight="@dimen/dimen0"/>
+
+
+                <!--change pay password-->
+                <LinearLayout
+                    android:id="@+id/mine_change_wallet_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:background="@drawable/selector_item"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen15">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_mine_wallet_password"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/info600"
+                        android:textSize="@dimen/text_16"/>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen17">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_tonext"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginLeft="@dimen/dimen0"
+                    android:layout_marginRight="@dimen/dimen0"/>
+
+                <View
+                    style="@style/space_10"
+                    android:background="@color/theme_bg"/>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginLeft="@dimen/dimen0"
+                    android:layout_marginRight="@dimen/dimen0"/>
+
+                <!--record-->
+                <LinearLayout
+                    android:id="@+id/mine_bill"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:background="@drawable/selector_item"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen15">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_mine_pay_records"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/info15"
+                        android:textSize="@dimen/text_16"/>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen17">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_tonext"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginRight="@dimen/dimen0"/>
+
+
+                <!--message-->
+                <LinearLayout
+                    android:id="@+id/mine_message"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:background="@drawable/selector_item"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen15">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_mine_message"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/info19"
+                        android:textSize="@dimen/text_16"/>
+
+                    <RelativeLayout
+                        android:id="@+id/msgStatus"
+                        android:layout_width="@dimen/dimen10"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                        <View
+                            android:layout_width="@dimen/dimen6"
+                            android:layout_height="@dimen/dimen6"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/circle_shape_red"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen17">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_tonext"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginRight="@dimen/dimen0"/>
+
+                <!--friend-->
+                <LinearLayout
+                    android:id="@+id/mine_friends"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:background="@drawable/selector_item"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen15">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_mine_friends"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/info14"
+                        android:textSize="@dimen/text_16"/>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen17">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_tonext"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginRight="@dimen/dimen0"/>
+
+
+                <!--update-->
+                <LinearLayout
+                    android:id="@+id/mine_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:background="@drawable/selector_item"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen15">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_mine_update"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/info17"
+                        android:textSize="@dimen/text_16"/>
+
+                    <TextView
+                        android:id="@+id/versionAttention"
+                        style="@style/TextViewStyle"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:textColor="@color/theme_text"
+                        android:textSize="@dimen/text_16"
+                        tools:text="@string/info18"/>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen17">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_tonext"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginRight="@dimen/dimen0"/>
+
+                <!--setting-->
+                <LinearLayout
+                    android:id="@+id/mine_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:background="@drawable/selector_item"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen15">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_mine_setting"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/info20"
+                        android:textSize="@dimen/text_16"/>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen17">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_tonext"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginLeft="@dimen/dimen0"
+                    android:layout_marginRight="@dimen/dimen0"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

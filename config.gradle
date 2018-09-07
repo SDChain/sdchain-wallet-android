@@ -1,0 +1,42 @@
+ext {
+    android = [
+            compileSdkVersion: 26,
+            buildToolsVersion: "26.0.1"
+    ]
+
+    dependencies = [
+            "appcompat-v7"                   : 'com.android.support:appcompat-v7:26.+',
+            "animated-vector-drawable"       : 'com.android.support:animated-vector-drawable:26.+',
+            "design"                         : 'com.android.support:design:26.+',
+            "support-v4"                     : 'com.android.support:support-v4:26.+',
+            "recyclerview-v7"                : 'com.android.support:recyclerview-v7:26.+',
+            "cardview-v7"                    : 'com.android.support:cardview-v7:26.+',
+            "espresso-core"                  : 'com.android.support.test.espresso:espresso-core:2.2.2',
+            "fileTree"                       : fileTree(include: ['*.jar'], dir: 'libs'),
+            "multidex"                       : 'com.android.support:multidex:1.0.1',
+            "rxjava"                         : 'io.reactivex.rxjava2:rxjava:2.0.1',
+            "rxandroid"                      : 'io.reactivex.rxjava2:rxandroid:2.0.1',
+            "glide"                          : 'com.github.bumptech.glide:glide:4.0.0',
+            "glide-compiler"                 : 'com.github.bumptech.glide:compiler:4.0.0',
+            "bottom-navigation-bar"          : 'com.ashokvarma.android:bottom-navigation-bar:1.2.0',
+            "logger"                         : 'com.orhanobut:logger:2.1.1',
+            "SmartRefreshLayout"             : 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-7',
+            "picture-library"                : 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.3',
+            "xydialog"                       : 'com.github.xieyang94:xydialog:0.3.3',
+            "volley-library"                 : 'com.mcxiaoke.volley:library:1.0.19',
+            "gson"                           : 'com.google.code.gson:gson:2.2.4',
+            "eventbus"                       : 'org.greenrobot:eventbus:3.0.0',
+            "constraint-layout"              : 'com.android.support.constraint:constraint-layout:1.0.2',
+            "greendao"                       : 'org.greenrobot:greendao:3.2.2',
+            "permission"                     : 'com.yanzhenjie:permission:2.0.0-rc3',
+            "systembartint"                  : 'com.readystatesoftware.systembartint:systembartint:1.0.3',
+            "butterknife"                    : 'com.jakewharton:butterknife:8.8.1',
+            "butterknife-compiler"           : 'com.jakewharton:butterknife-compiler:8.8.1',
+            "arouter-api"                    : 'com.alibaba:arouter-api:1.3.1',
+            "arouter-compiler"               : 'com.alibaba:arouter-compiler:1.1.4',
+            "datepick"                       : project(':datepick'),
+            "pinyin4j"                       : files('libs/pinyin4j-2.5.0.jar'),
+            "zbarlibary"                     : project(':zbarlibary'),
+    ]
+
+}

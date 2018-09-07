@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.SetWalletPwdActivity">
+
+    <!--title-->
+    <include layout="@layout/title_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space style="@style/space_10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!--key-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/secret"
+                        style="@style/EditTextStyleOne"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:hint="@string/info490"
+                        android:paddingLeft="@dimen/dimen20"
+                        android:textSize="@dimen/text_16" />
+
+                    <RelativeLayout
+                        android:id="@+id/deleteSecret"
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen18"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_delete" />
+                    </RelativeLayout>
+
+                    <FrameLayout
+                        android:id="@+id/scan"
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen15">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_scan_qr_code_44" />
+                    </FrameLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_marginLeft="@dimen/dimen20"
+                    android:background="@color/theme_light" />
+
+                <!--password-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/password1"
+                        style="@style/EditTextStyleOne"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:hint="@string/info491"
+                        android:inputType="numberPassword"
+                        android:maxLength="6"
+                        android:paddingLeft="@dimen/dimen20"
+                        android:textSize="@dimen/text_16" />
+
+                    <RelativeLayout
+                        android:id="@+id/deletePassword1"
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen18"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_delete" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_marginLeft="@dimen/dimen20"
+                    android:background="@color/theme_light" />
+
+                <!--confirm password-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/password2"
+                        style="@style/EditTextStyleOne"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:hint="@string/info492"
+                        android:inputType="numberPassword"
+                        android:maxLength="6"
+                        android:paddingLeft="@dimen/dimen20"
+                        android:textSize="@dimen/text_16" />
+
+                    <RelativeLayout
+                        android:id="@+id/deletePassword2"
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen18"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_delete" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_marginLeft="@dimen/dimen20"
+                    android:background="@color/theme_light" />
+
+            </LinearLayout>
+
+            <Space style="@style/space_20" />
+
+            <Button
+                android:id="@+id/forgetWalletPwdBtn"
+                style="@style/ButtonStyle"
+                android:layout_marginBottom="@dimen/dimen20"
+                android:enabled="false"
+                android:text="@string/info493"
+                android:textSize="@dimen/text_14" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

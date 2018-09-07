@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/paddingTop"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/theme"
+            android:theme="@style/ToolBar_Mine">
+
+            <LinearLayout
+                android:id="@+id/chooseCurrency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="SDA"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_18"/>
+
+                <FrameLayout
+                    android:padding="@dimen/dimen3"
+                    android:layout_width="@dimen/dimen25"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom">
+
+                    <ImageView
+                        android:id="@+id/choose"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_currency_hide"/>
+                </FrameLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <!--add -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen30"
+                android:paddingLeft="@dimen/dimen20"
+                android:text="@string/info602"
+                android:textColor="@color/theme"
+                android:textSize="@dimen/text_18"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen50"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen20"
+                android:paddingRight="@dimen/dimen10">
+
+                <EditText
+                    android:id="@+id/addAccountAddress"
+                    style="@style/EditTextStyleOne"
+                    android:layout_width="@dimen/dimen0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:digits="@string/info637"/>
+
+                <RelativeLayout
+                    android:id="@+id/deleteAccount"
+                    android:layout_width="@dimen/dimen50"
+                    android:layout_height="@dimen/dimen50"
+                    android:padding="@dimen/dimen19"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_delete"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/addAccount"
+                    android:layout_width="@dimen/dimen50"
+                    android:layout_height="@dimen/dimen50"
+                    android:padding="@dimen/dimen15">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/selector_add_friend"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/LineStyle"
+                android:background="@color/theme"/>
+
+            <!--add balance-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen50"
+                android:layout_marginTop="@dimen/dimen40"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen20"
+                android:paddingRight="@dimen/dimen20">
+
+                <EditText
+                    android:id="@+id/moneyCount"
+                    style="@style/EditTextStyleNum"
+                    android:layout_width="@dimen/dimen0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:digits="@string/info640"
+                    android:hint="0.00"
+                    android:inputType="number|numberDecimal"
+                    android:paddingRight="@dimen/dimen10"
+                    android:textSize="@dimen/text_30"/>
+
+                <RelativeLayout
+                    android:id="@+id/deleteMoney"
+                    android:layout_width="@dimen/dimen50"
+                    android:layout_height="@dimen/dimen50"
+                    android:padding="@dimen/dimen19"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_delete"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/allMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/info603"
+                    android:textColor="@drawable/selector_text"
+                    android:textSize="@dimen/text_18"/>
+
+            </LinearLayout>
+
+            <View
+                style="@style/LineStyle"
+                android:background="@color/theme"/>
+
+            <TextView
+                android:id="@+id/attention"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen2"
+                android:gravity="right|end"
+                android:paddingRight="@dimen/dimen20"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_12"
+                tools:text="可用：6.0000，冻结：5.0000"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen30"
+                android:paddingLeft="@dimen/dimen20"
+                android:text="@string/info606"
+                android:textColor="@color/theme"
+                android:textSize="@dimen/text_18"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen50"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen20"
+                android:paddingRight="@dimen/dimen20">
+
+                <EditText
+                    android:id="@+id/remarks"
+                    style="@style/EditTextStyleOne"
+                    android:layout_width="@dimen/dimen0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"/>
+
+                <RelativeLayout
+                    android:id="@+id/deleteRemarks"
+                    android:layout_width="@dimen/dimen50"
+                    android:layout_height="@dimen/dimen50"
+                    android:padding="@dimen/dimen19"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_delete"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+            <View
+                style="@style/LineStyle"
+                android:background="@color/theme"/>
+
+            <Space style="@style/space_10"/>
+
+            <Button
+                android:id="@+id/payBtn"
+                style="@style/ButtonStyle"
+                android:layout_marginBottom="@dimen/dimen30"
+                android:layout_marginTop="@dimen/dimen20"
+                android:enabled="false"
+                android:text="@string/info6"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16"/>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

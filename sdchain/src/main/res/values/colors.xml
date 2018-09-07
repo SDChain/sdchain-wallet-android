@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#000000</color>
+    <color name="red">#FF0000</color>
+
+    <color name="first">#ffff00</color>
+    <color name="second">#40ff00</color>
+    <color name="green">#00FF00</color>
+    <color name="green2">#22AC38</color>
+    <color name="third">#00ffff</color>
+    <color name="fouth">#8000ff</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white50">#50ffffff</color>
+
+    <color name="gray">#888888</color>
+
+    <color name="black">#000000</color>
+
+    <!--theme color-->
+    <color name="theme">#51BEDC</color>
+    <color name="theme2">#2269D4</color>
+    <color name="theme_pressed">#638FFF</color>
+    <color name="theme_text">#8C8C8C</color>
+    <color name="theme_text_deep">#000000</color>
+    <color name="theme_btn_unpressed">#A8A8A8</color>
+    <color name="theme_light">#E1E1E1</color>
+    <color name="theme_unpressed_warn">#ff6363</color>
+    <color name="theme_pressed_warn">#d22828</color>
+    <color name="textd22828">#d22828</color>
+    <color name="theme_bg">#efeff5</color>
+
+    <!--scan-->
+    <color name="scan">#AA333333</color>
+    <!--translation-->
+    <color name="translation">#00000000</color>
+    <color name="translation30">#30000000</color>
+
+    <!--dialog background-->
+    <color name="xydialog_colorProgressBar">@color/theme</color>
+    <!--background color-->
+    <color name="xydialog_colorBackground">#ffffff</color>
+
+    <!--login input-->
+    <color name="edit_line">#90b4e9</color>
+    <color name="edit_line_hint">#808080</color>
+
+    <!--index SDA color-->
+    <color name="assets_sda_text">#46474d</color>
+    <color name="assets_bg_deep">#1A98BC</color>
+    <color name="assets_bg_deep2">#2061C4</color>
+    <color name="assets_jihuo_text">#D1bf7f</color>
+
+    <!--buttom text color-->
+    <color name="bottom_text_color">#0ebbef</color>
+
+    <!--big text color-->
+    <color name="big_text">#46474d</color>
+
+    <color name="text_deep_button">#2f5ea5</color>
+
+    <color name="msg_title_text">#282828</color>
+    <color name="text282828">#282828</color>
+    <color name="msg_msg_text">#888888</color>
+
+    <!--trust-->
+    <color name="credit_grant_text">#323232</color>
+
+    <color name="currency_text">#323232</color>
+
+    <color name="color_F4F4F4">#F4F4F4</color>
+    <color name="color_0EBBEF">#0ebbef</color>
+    <color name="color_EFEFF5">#EFEFF5</color>
+    <color name="color_00FF61">#00FF61</color>
+
+    <color name="common_blue_0090FF">#2269D4</color>
+
+
+</resources>

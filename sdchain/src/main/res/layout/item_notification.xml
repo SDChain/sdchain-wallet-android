@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/dimen3">
+
+    <ImageView
+        android:id="@+id/notificationImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/stat_sys_download" />
+
+    <TextView
+        android:id="@+id/notificationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/notificationImage"
+        android:paddingLeft="@dimen/dimen6"
+        android:textColor="@color/theme" />
+
+    <TextView
+        android:id="@+id/notificationPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/notificationTitle"
+        android:paddingTop="@dimen/dimen2"
+        android:textColor="@color/theme" />
+
+    <ProgressBar
+        android:id="@+id/notificationProgress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="5dip"
+        android:layout_alignLeft="@id/notificationTitle"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/notificationTitle"
+        android:max="100"
+        android:paddingLeft="@dimen/dimen6"
+        android:paddingRight="@dimen/dimen3"
+        android:paddingTop="@dimen/dimen2"
+        android:progress="0"
+        android:progressDrawable="@drawable/progressbar_preview" />
+
+</RelativeLayout>

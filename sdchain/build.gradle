@@ -1,0 +1,146 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.getkeepsafe.dexcount'
+apply plugin: 'org.greenrobot.greendao'
+
+
+def keystoreFilepath = ''
+def keystorePSW = ''
+def keystoreAlias = ''
+def keystoreAliasPSW = ''
+def keyfile = file('s.keystore.temp')
+
+Properties properties = new Properties()
+
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+keystoreFilepath = properties.getProperty("keystore.path")
+
+if (keystoreFilepath) {
+    keystorePSW = properties.getProperty("keystore.password")
+    keystoreAlias = properties.getProperty("keystore.alias")
+    keystoreAliasPSW = properties.getProperty("keystore.alias_password")
+    keyfile = file(keystoreFilepath)
+}
+
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    useLibrary 'org.apache.http.legacy'
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+    // greenDao
+    greendao {
+        // version
+        schemaVersion 4
+        // create file package name
+        daoPackage 'com.io.sdchain.greendao'
+        // create file path
+        targetGenDir 'src/main/java'
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
+    // use Java1.8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        release {
+            keyAlias keystoreAlias
+            keyPassword keystoreAliasPSW
+            storeFile keyfile
+            storePassword keystorePSW
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.io.sdchain"
+        minSdkVersion 18
+        targetSdkVersion 23
+        versionCode 5
+        versionName "1.0.0.5"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        flavorDimensions "versionCode"
+        ndk {
+            abiFilters 'armeabi', 'x86'
+// 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
+
+        }
+        multiDexEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            buildConfigField("String", "BASE_URL", "\"https://app-service.sdchain.io/\"")
+            buildConfigField("String", "SIGNKEY", SIGN as String)
+        }
+
+    }
+
+    android.applicationVariants.all { variant ->
+        if (variant.buildType.signingConfig.getName() == android.signingConfigs.release.getName()) {
+            variant.outputs.all { output ->
+                outputFileName = "sdchain_wallet_android" + "_" + buildType.name + "_" + defaultConfig.versionName + ".apk"
+            }
+        }
+    }
+
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/2'] } }
+    buildToolsVersion '27.0.3'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testImplementation 'junit:junit:4.12'
+
+    implementation project(':datepick')
+    implementation files('libs/pinyin4j-2.5.0.jar')
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation rootProject.ext.dependencies["animated-vector-drawable"]
+    implementation rootProject.ext.dependencies["design"]
+    implementation rootProject.ext.dependencies["support-v4"]
+    implementation rootProject.ext.dependencies["recyclerview-v7"]
+    implementation rootProject.ext.dependencies["cardview-v7"]
+    implementation rootProject.ext.dependencies["rxjava"]
+    implementation rootProject.ext.dependencies["rxandroid"]
+    implementation rootProject.ext.dependencies["glide"]
+    implementation rootProject.ext.dependencies["bottom-navigation-bar"]
+    implementation rootProject.ext.dependencies["logger"]
+    implementation rootProject.ext.dependencies["SmartRefreshLayout"]
+    implementation rootProject.ext.dependencies["picture-library"]
+    implementation rootProject.ext.dependencies["xydialog"]
+    implementation rootProject.ext.dependencies["multidex"]
+    implementation rootProject.ext.dependencies["volley-library"]
+    implementation rootProject.ext.dependencies["gson"]
+    implementation rootProject.ext.dependencies["eventbus"]
+    implementation rootProject.ext.dependencies["constraint-layout"]
+    implementation rootProject.ext.dependencies["greendao"]
+    implementation rootProject.ext.dependencies["permission"]
+    implementation rootProject.ext.dependencies["systembartint"]
+    implementation rootProject.ext.dependencies["butterknife"]
+    implementation rootProject.ext.dependencies["arouter-api"]
+    annotationProcessor rootProject.ext.dependencies["glide-compiler"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
+    implementation rootProject.ext.dependencies["zbarlibary"]
+
+}

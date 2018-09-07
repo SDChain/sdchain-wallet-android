@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/allLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.WalletAddressActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/paddingTop"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/theme"
+            android:theme="@style/ToolBarWithNavigationBack">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_18" />
+
+            <TextView
+                android:id="@+id/right"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end|right"
+                android:gravity="center_vertical|right"
+                android:paddingRight="@dimen/dimen14"
+                android:textColor="@color/white" />
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/allLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Space style="@style/space_20" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen60"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen30"
+                android:paddingRight="@dimen/dimen30">
+
+                <FrameLayout
+                    android:layout_width="@dimen/dimen60"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_wallet_address" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen30"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/walletNickName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dimen30"
+                            android:layout_marginLeft="@dimen/dimen10"
+                            android:background="@null"
+                            android:hint="@string/info570"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
+                            android:textSize="@dimen/text_16" />
+
+                        <FrameLayout
+                            android:id="@+id/edit"
+                            android:padding="@dimen/dimen6"
+                            android:layout_width="@dimen/dimen30"
+                            android:layout_height="@dimen/dimen30">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_edit" />
+                        </FrameLayout>
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/account"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/dimen10"
+                        android:textSize="@dimen/text_12"
+                        tools:text="@string/info641" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space style="@style/space_20" />
+
+
+            <!--qr code-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen180">
+
+                <ImageView
+                    android:id="@+id/accountCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:src="@mipmap/ic_test_code" />
+            </RelativeLayout>
+
+            <Space style="@style/space_20" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/info571"
+                android:textColor="@color/theme_text"
+                android:textSize="@dimen/text_16" />
+
+            <Button
+                android:id="@+id/copyBtn"
+                style="@style/ButtonStyle2"
+                android:layout_marginBottom="@dimen/dimen20"
+                android:layout_marginLeft="@dimen/dimen30"
+                android:layout_marginRight="@dimen/dimen30"
+                android:layout_marginTop="@dimen/dimen20"
+                android:text="@string/info572"
+                android:textColor="@drawable/selector_text2"
+                android:textSize="@dimen/text_16" />
+
+            <Button
+                android:id="@+id/saveBtn"
+                style="@style/ButtonStyle2"
+                android:layout_marginBottom="@dimen/dimen20"
+                android:layout_marginLeft="@dimen/dimen30"
+                android:layout_marginRight="@dimen/dimen30"
+                android:text="@string/info573"
+                android:textColor="@drawable/selector_text2"
+                android:textSize="@dimen/text_16" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

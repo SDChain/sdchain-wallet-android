@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.io.sdchain">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission
+        android:name="android.permission.ACCESS_MOCK_LOCATION"
+        tools:ignore="MockLocation" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <application
+        android:name="com.io.sdchain.base.BaseApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label">
+        <activity
+            android:name="com.io.sdchain.ui.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/DrawerLayout"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.ForgetPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.RegisterPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.RegisterEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.AddFriendActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.MineActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.BindPhoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.BindEmailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.WalletAddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.KeyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.BillActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.BillDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.FriendActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.FriendDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.SetLoginPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.MsgListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.MsgDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.io.sdchain.service.APKTOupdateDownService" />
+
+        <activity
+            android:name="com.io.sdchain.ui.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.io.sdchain.ui.activity.ForgetPwd2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.RegisterPhone2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.RegisterEmail2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.CreateAccountActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.BindPhoneFirstActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.BindEmailFirstActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.CertificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.CodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.BadCodeResultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.SetWalletPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.ForgetWalletPwdActivity"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
+        <activity
+            android:name="com.io.sdchain.ui.activity.AddWalletActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.ImportWalletActivity"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

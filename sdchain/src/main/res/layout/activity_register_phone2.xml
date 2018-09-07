@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.activity.RegisterPhone2Activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen200">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen200"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_logo_bg" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen20"
+            android:background="@color/translation"
+            android:theme="@style/ToolBarWithNavigationBack">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_18" />
+        </android.support.v7.widget.Toolbar>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimen20"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <!--password-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen10"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dimen30"
+                android:paddingRight="@dimen/dimen30">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/info59"
+                    android:textColor="@color/theme"
+                    android:textSize="@dimen/text_16"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen40"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/password1"
+                        style="@style/EditTextStyleOne"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:hint="@string/info544"
+                        android:inputType="textPassword"/>
+
+                    <RelativeLayout
+                        android:id="@+id/deletePassword1"
+                        android:layout_width="@dimen/dimen40"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:padding="@dimen/dimen13"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_delete"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen40"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:padding="@dimen/dimen10">
+
+                        <CheckBox
+                            android:id="@+id/lookPwd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/selector_pic_eye"
+                            android:button="@null"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="@dimen/dimen30"
+                android:layout_marginRight="@dimen/dimen30"
+                android:background="@color/edit_line"/>
+
+
+            <!--code-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen20"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dimen30"
+                android:paddingRight="@dimen/dimen30">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/info545"
+                        android:textColor="@color/theme"
+                        android:textSize="@dimen/text_16"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/dimen5"
+                        android:text="@string/info546"
+                        android:textColor="@color/msg_msg_text"
+                        android:textSize="@dimen/text_10"/>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen40"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:hint="@string/info652"
+                        android:id="@+id/walletPassword"
+                        style="@style/EditTextStyleOne"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:inputType="numberPassword"
+                        android:maxLength="6"/>
+
+                    <RelativeLayout
+                        android:id="@+id/deletePassword2"
+                        android:layout_width="@dimen/dimen40"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:padding="@dimen/dimen13"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_delete"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen40"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:padding="@dimen/dimen10">
+
+                        <CheckBox
+                            android:id="@+id/lookWalletPwd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/selector_pic_eye"
+                            android:button="@null"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px1"
+                android:layout_marginLeft="@dimen/dimen30"
+                android:layout_marginRight="@dimen/dimen30"
+                android:background="@color/edit_line"/>
+
+        </LinearLayout>
+
+        <Space style="@style/space_30"/>
+
+        <Button
+            android:id="@+id/phoneRegisterBtn"
+            style="@style/ButtonStyle"
+            android:layout_marginLeft="@dimen/dimen30"
+            android:layout_marginRight="@dimen/dimen30"
+            android:layout_marginTop="@dimen/dimen20"
+            android:enabled="false"
+            android:text="@string/info62"
+            android:textSize="@dimen/text_16"/>
+
+        <!--agreement-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/dimen10">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <com.io.sdchain.widget.SmoothCheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="@dimen/dimen20"
+                    android:layout_height="@dimen/dimen20"
+                    android:layout_margin="@dimen/dimen5"
+                    app:color_checked="@color/theme"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/info547"
+                    android:textColor="@color/theme_text_deep"
+                    android:textSize="@dimen/text_14"/>
+
+                <TextView
+                    android:id="@+id/agreement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="SD-Wallet"
+                    android:textColor="@color/theme"
+                    android:textSize="@dimen/text_14"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/info548"
+                    android:textColor="@color/theme_text_deep"
+                    android:textSize="@dimen/text_14"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

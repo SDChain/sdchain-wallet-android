@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.activity.MineActivity">
+
+    <include layout="@layout/title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--avatar-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen100"
+                android:background="@drawable/selector_item"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen20">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_width="@dimen/dimen0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/info510"
+                    android:textSize="@dimen/text_16" />
+
+
+                <RelativeLayout
+                    android:layout_width="@dimen/dimen100"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/dimen20"
+                    android:gravity="center"
+                    android:padding="@dimen/dimen10">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_userpic"
+                        android:transitionName="touxiang" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <!--item-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginRight="@dimen/dimen0" />
+
+                <!--qr code-->
+                <LinearLayout
+                    android:id="@+id/mineaty_item_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:background="@drawable/selector_item"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen20">
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/info511"
+                        android:textSize="@dimen/text_16" />
+
+                    <Space
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="@dimen/dimen34">
+
+                        <ImageView
+                            android:id="@+id/code"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_code"
+                            android:transitionName="code" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen17">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_tonext" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginRight="@dimen/dimen0" />
+
+                <!--nick-->
+                <LinearLayout
+                    android:id="@+id/mineaty_item_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:background="@drawable/selector_item"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen20">
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/info512"
+                        android:textSize="@dimen/text_16" />
+
+                    <TextView
+                        android:id="@+id/mineaty_nickname"
+                        style="@style/TextViewStyle"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:textColor="@color/theme_text"
+                        android:textSize="@dimen/text_16" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen17">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_tonext" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginRight="@dimen/dimen0" />
+                <!--user name-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:background="@drawable/selector_item"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen20">
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/info513"
+                        android:textSize="@dimen/text_16" />
+
+                    <TextView
+                        android:id="@+id/mineaty_userName"
+                        style="@style/TextViewStyle"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:textColor="@color/theme_text"
+                        android:textSize="@dimen/text_16" />
+
+                    <Space
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginRight="@dimen/dimen0" />
+
+                <!--certification-->
+                <LinearLayout
+                    android:id="@+id/mine_realname_certification"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:background="@drawable/selector_item"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen20">
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/info514"
+                        android:textSize="@dimen/text_16" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen17">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_tonext" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginRight="@dimen/dimen0" />
+
+
+                <!--after certification-->
+                <LinearLayout
+                    android:id="@+id/userRealMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <!--real name-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen50"
+                        android:background="@drawable/selector_item"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/dimen20">
+
+                        <TextView
+                            style="@style/TextViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="@string/info515"
+                            android:textSize="@dimen/text_16" />
+
+                        <TextView
+                            android:id="@+id/mineaty_realname"
+                            style="@style/TextViewStyle"
+                            android:layout_width="@dimen/dimen0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|right"
+                            tools:text="钱*"
+                            android:textColor="@color/theme_text"
+                            android:textSize="@dimen/text_16" />
+
+                        <Space
+                            android:layout_width="@dimen/dimen50"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                    <View
+                        style="@style/LineStyle"
+                        android:layout_marginRight="@dimen/dimen0" />
+
+                    <!--ID type-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen50"
+                        android:background="@drawable/selector_item"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/dimen20">
+
+                        <TextView
+                            style="@style/TextViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="@string/info516"
+                            android:textSize="@dimen/text_16" />
+
+                        <TextView
+                            android:id="@+id/mineaty_cardtype"
+                            style="@style/TextViewStyle"
+                            android:layout_width="@dimen/dimen0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|right"
+                            android:text="@string/info517"
+                            android:textColor="@color/theme_text"
+                            android:textSize="@dimen/text_16" />
+
+                        <Space
+                            android:layout_width="@dimen/dimen50"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                    <View
+                        style="@style/LineStyle"
+                        android:layout_marginRight="@dimen/dimen0" />
+
+                    <!--Id code-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen50"
+                        android:background="@drawable/selector_item"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/dimen20">
+
+                        <TextView
+                            style="@style/TextViewStyle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="@string/info518"
+                            android:textSize="@dimen/text_16" />
+
+                        <TextView
+                            android:id="@+id/mineaty_cardnum"
+                            style="@style/TextViewStyle"
+                            android:layout_width="@dimen/dimen0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical|right"
+                            tools:text="322***********2017"
+                            android:textColor="@color/theme_text"
+                            android:textSize="@dimen/text_16" />
+
+                        <Space
+                            android:layout_width="@dimen/dimen50"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                    <View
+                        style="@style/LineStyle"
+                        android:layout_marginRight="@dimen/dimen0" />
+
+                </LinearLayout>
+
+                <!--city-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:background="@drawable/selector_item"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen20">
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/info519"
+                        android:textSize="@dimen/text_16" />
+
+                    <TextView
+                        android:id="@+id/mineaty_area"
+                        style="@style/TextViewStyle"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:text="@string/info520"
+                        android:textColor="@color/theme_text"
+                        android:textSize="@dimen/text_16" />
+
+                    <Space
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginRight="@dimen/dimen0" />
+
+                <!--phone number-->
+                <LinearLayout
+                    android:id="@+id/mineaty_item_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:background="@drawable/selector_item"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen20">
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/info521"
+                        android:textSize="@dimen/text_16" />
+
+                    <TextView
+                        android:id="@+id/mineaty_phone"
+                        style="@style/TextViewStyle"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:textColor="@color/theme_text"
+                        android:textSize="@dimen/text_16" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen17">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_tonext" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginRight="@dimen/dimen0" />
+
+                <!--email-->
+                <LinearLayout
+                    android:id="@+id/mineaty_item_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:background="@drawable/selector_item"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dimen20">
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/info522"
+                        android:textSize="@dimen/text_16" />
+
+                    <TextView
+                        android:id="@+id/mineaty_email"
+                        style="@style/TextViewStyle"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical|right"
+                        android:textColor="@color/theme_text"
+                        android:textSize="@dimen/text_16" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen17">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_tonext" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginLeft="@dimen/dimen0"
+                    android:layout_marginRight="@dimen/dimen0" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <!--</android.support.v4.widget.NestedScrollView>-->
+    </ScrollView>
+</LinearLayout>

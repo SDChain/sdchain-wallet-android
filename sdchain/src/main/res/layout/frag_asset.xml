@@ -1,0 +1,115 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/frag_asset_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_width="@dimen/dimen200"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/white"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen40"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/frag_asset_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen20"/>
+
+        <View
+            style="@style/LineStyle"
+            android:layout_marginLeft="@dimen/dimen0"
+            android:layout_marginRight="@dimen/dimen0"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen20"/>
+
+        <RelativeLayout
+            android:id="@+id/assets_menu_create_account"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen50"
+            android:background="@drawable/selector_assets_menu"
+            android:paddingLeft="@dimen/dimen20">
+
+            <FrameLayout
+                android:id="@+id/assets_menu_create"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen50"
+                android:layout_marginLeft="@dimen/dimen3"
+                android:paddingBottom="@dimen/dimen14"
+                android:paddingTop="@dimen/dimen14">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_assets_menu_create_unpressed"/>
+            </FrameLayout>
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen16"
+                android:layout_toRightOf="@+id/assets_menu_create"
+                android:gravity="center_vertical"
+                android:text="@string/info583"
+                android:textSize="@dimen/text_16"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/assets_menu_exit_login"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen50"
+            android:background="@drawable/selector_assets_menu"
+            android:paddingLeft="@dimen/dimen20">
+
+            <FrameLayout
+                android:id="@+id/assets_menu_exit"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen50"
+                android:layout_marginLeft="@dimen/dimen3"
+                android:paddingBottom="@dimen/dimen14"
+                android:paddingTop="@dimen/dimen14">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_assets_menu_exit_unpressed"/>
+            </FrameLayout>
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen50"
+                android:layout_marginLeft="@dimen/dimen16"
+                android:layout_toRightOf="@+id/assets_menu_exit"
+                android:gravity="center_vertical"
+                android:text="@string/info584"
+                android:textSize="@dimen/text_16"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

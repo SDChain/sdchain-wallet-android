@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.activity.FriendActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/paddingTop"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/theme"
+            android:theme="@style/ToolBarWithNavigationBack">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_18" />
+
+            <FrameLayout
+                android:id="@+id/right"
+                style="@style/friend_add">
+
+                <ImageView
+                    android:id="@+id/right_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/addfriend_bg" />
+            </FrameLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen50"
+            android:background="@color/white"
+            android:padding="@dimen/dimen8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/search">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/dimen30"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dimen5">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_search" />
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/friendAccount"
+                    style="@style/EditTextStyleOne"
+                    android:layout_width="@dimen/dimen0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="@string/info494"
+                    android:imeOptions="actionSearch" />
+
+                <RelativeLayout
+                    android:id="@+id/delete"
+                    android:layout_width="@dimen/dimen30"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dimen5"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_delete" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/noData"
+            layout="@layout/recycler_no_data"
+            android:visibility="gone"/>
+
+        <include
+            android:id="@+id/errorData"
+            layout="@layout/recycler_data_error"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerFriend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none" />
+
+            <com.io.sdchain.widget.IndexBar
+                android:id="@+id/words"
+                android:layout_width="@dimen/dimen30"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true" />
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="@dimen/dimen80"
+                android:layout_height="@dimen/dimen80"
+                android:layout_centerInParent="true"
+                android:background="@drawable/index_bar_text"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_40"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

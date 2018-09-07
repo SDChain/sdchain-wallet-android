@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dip"
+    android:background="@drawable/selector_item"
+    android:orientation="vertical"
+    tools:context=".ui.activity.BillActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen0"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen10">
+
+        <TextView
+            android:id="@+id/billType"
+            style="@style/TextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|bottom"
+            tools:text="@string/info625" />
+
+        <TextView
+            android:id="@+id/billPrice"
+            style="@style/TextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|bottom"
+            android:paddingLeft="@dimen/dimen10"
+            tools:text="+9000HWC" />
+
+        <TextView
+            android:id="@+id/billTime"
+            android:layout_width="@dimen/dimen0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right|bottom"
+            android:paddingRight="10dip"
+            android:textSize="@dimen/text_11"
+            tools:text="08/01 13:45" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen0"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen10">
+
+
+        <TextView
+            android:id="@+id/translationNum"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|top"
+            android:paddingTop="@dimen/dimen3"
+            android:textSize="@dimen/text_14"
+            tools:text="5gsghsrfw46uydffbgf..." />
+
+    </LinearLayout>
+
+    <View
+        style="@style/LineStyle"
+        android:layout_marginRight="@dimen/dimen0" />
+
+</LinearLayout>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fitsSystemWindows="false"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen200"
+            android:fitsSystemWindows="false"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_logo_bg" />
+
+        <Space style="@style/space_30" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen60"
+            android:layout_marginLeft="@dimen/dimen20"
+            android:layout_marginRight="@dimen/dimen20"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dimen10"
+            android:paddingRight="@dimen/dimen10">
+
+
+            <TextView
+                style="@style/login_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/info40" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/account"
+                    android:layout_width="@dimen/dimen0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/info41"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="@dimen/text_16"
+                    android:theme="@style/login_editText" />
+
+                <RelativeLayout
+                    android:id="@+id/deleteAccount"
+                    android:layout_width="@dimen/dimen50"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dimen13"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_delete" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px2"
+            android:layout_marginLeft="@dimen/dimen30"
+            android:layout_marginRight="@dimen/dimen30"
+            android:background="@color/edit_line" />
+
+        <Space style="@style/space_20" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen60"
+            android:layout_marginLeft="@dimen/dimen20"
+            android:layout_marginRight="@dimen/dimen20"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dimen10"
+            android:paddingRight="@dimen/dimen10">
+
+            <TextView
+                style="@style/login_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/info42" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="@dimen/dimen0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/info43"
+                    android:inputType="textPassword"
+                    android:textSize="@dimen/text_16"
+                    android:theme="@style/login_editText" />
+
+                <RelativeLayout
+                    android:id="@+id/deletePassword"
+                    android:layout_width="@dimen/dimen50"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/dimen13"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_delete" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px2"
+            android:layout_marginLeft="@dimen/dimen30"
+            android:layout_marginRight="@dimen/dimen30"
+            android:background="@color/edit_line" />
+
+        <Space style="@style/space_40" />
+
+        <Button
+            android:id="@+id/loginBtn"
+            style="@style/ButtonStyle"
+            android:layout_marginLeft="@dimen/dimen30"
+            android:layout_marginRight="@dimen/dimen30"
+            android:text="@string/info44"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_16" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dimen20"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen20"
+        android:paddingRight="@dimen/dimen20">
+
+        <TextView
+            android:id="@+id/loginRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/info45"
+            android:textColor="@drawable/selector_text"
+            android:textSize="@dimen/text_14" />
+
+
+        <View
+            android:layout_width="@dimen/dimen0"
+            android:layout_height="@dimen/dimen15"
+            android:layout_marginLeft="@dimen/dimen10"
+            android:layout_marginRight="@dimen/dimen10"
+            android:layout_weight="1" />
+
+
+        <TextView
+            android:id="@+id/loginForgetPwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/info46"
+            android:textColor="@drawable/selector_text"
+            android:textSize="@dimen/text_14" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

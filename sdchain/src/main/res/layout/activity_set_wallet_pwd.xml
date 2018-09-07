@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.SetWalletPwdActivity">
+
+    <!--title-->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/paddingTop"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/theme"
+            android:theme="@style/ToolBarWithNavigationBack">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_18"
+                tools:text="@string/info561" />
+
+            <TextView
+                android:id="@+id/right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|end"
+                android:paddingRight="@dimen/dimen18"
+                android:text="@string/info562"
+                android:textColor="@drawable/selector_text_color_white"
+                android:textSize="@dimen/text_14" />
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Space style="@style/space_10" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!--original-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/walletPwd"
+                        style="@style/EditTextStyleOne"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:hint="@string/info563"
+                        android:inputType="numberPassword"
+                        android:maxLength="6"
+                        android:paddingLeft="@dimen/dimen20"
+                        android:textSize="@dimen/text_16" />
+
+                    <RelativeLayout
+                        android:id="@+id/deleteWalletpwd"
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen18"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_delete" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_marginLeft="@dimen/dimen20"
+                    android:background="@color/theme_light" />
+
+                <!--password-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/password1"
+                        style="@style/EditTextStyleOne"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:hint="@string/info564"
+                        android:inputType="numberPassword"
+                        android:maxLength="6"
+                        android:paddingLeft="@dimen/dimen20"
+                        android:textSize="@dimen/text_16" />
+
+                    <RelativeLayout
+                        android:id="@+id/deletePassword1"
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen18"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_delete" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_marginLeft="@dimen/dimen20"
+                    android:background="@color/theme_light" />
+
+                <!--password confirm-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/password2"
+                        style="@style/EditTextStyleOne"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:hint="@string/info565"
+                        android:inputType="numberPassword"
+                        android:maxLength="6"
+                        android:paddingLeft="@dimen/dimen20"
+                        android:textSize="@dimen/text_16" />
+
+                    <RelativeLayout
+                        android:id="@+id/deletePassword2"
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen18"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_delete" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_marginLeft="@dimen/dimen20"
+                    android:background="@color/theme_light" />
+
+            </LinearLayout>
+
+            <Space style="@style/space_20" />
+
+            <Button
+                android:id="@+id/changeWalletPwdBtn"
+                style="@style/ButtonStyle"
+                android:layout_marginBottom="@dimen/dimen20"
+                android:enabled="false"
+                android:text="@string/info566"
+                android:textSize="@dimen/text_14" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

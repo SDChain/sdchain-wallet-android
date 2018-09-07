@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/theme_bg">
+
+    <include layout="@layout/title_toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen10"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:id="@+id/changeLoginPwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen50"
+            android:background="@drawable/selector_item"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen10">
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/info425"
+                android:textSize="@dimen/text_16" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/dimen50"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dimen17">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_tonext" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            style="@style/LineStyle"
+            android:layout_marginLeft="@dimen/dimen10"
+            android:layout_marginRight="@dimen/dimen0" />
+
+        <LinearLayout
+            android:id="@+id/changePayPwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen50"
+            android:background="@drawable/selector_item"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen10">
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:layout_width="@dimen/dimen0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/info426"
+                android:textSize="@dimen/text_16" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/dimen50"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dimen17">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@mipmap/ic_tonext" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

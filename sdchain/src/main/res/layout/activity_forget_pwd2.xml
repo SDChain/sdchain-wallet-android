@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.activity.ForgetPwd2Activity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen200">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen200"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_logo_bg" />
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimen20"
+                android:background="@color/translation"
+                android:theme="@style/ToolBarWithNavigationBack">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_18" />
+            </android.support.v7.widget.Toolbar>
+        </RelativeLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen20"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!--user name-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen60"
+                    android:layout_marginTop="@dimen/dimen10"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dimen20"
+                    android:paddingRight="@dimen/dimen20"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/info484"
+                        android:textColor="@color/theme"
+                        android:textSize="@dimen/text_20" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/account"
+                            style="@style/EditTextStyleOne"
+                            android:layout_width="@dimen/dimen0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <RelativeLayout
+                            android:id="@+id/deleteAccount"
+                            android:layout_width="@dimen/dimen50"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:padding="@dimen/dimen10"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_delete" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_marginLeft="@dimen/dimen20"
+                    android:layout_marginRight="@dimen/dimen20"
+                    android:background="@color/edit_line"
+                    android:visibility="gone" />
+
+                <!--key-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen60"
+                    android:layout_marginTop="@dimen/dimen10"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dimen20"
+                    android:paddingRight="@dimen/dimen20"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/info485"
+                        android:textColor="@color/theme"
+                        android:textSize="@dimen/text_20" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/key"
+                            style="@style/EditTextStyleOne"
+                            android:layout_width="@dimen/dimen0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <RelativeLayout
+                            android:id="@+id/deleteKey"
+                            android:layout_width="@dimen/dimen50"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dimen10"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_delete" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/scan"
+                            android:layout_width="@dimen/dimen50"
+                            android:layout_height="match_parent"
+                            android:padding="@dimen/dimen8">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_scan_qr_code_44" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_marginLeft="@dimen/dimen20"
+                    android:layout_marginRight="@dimen/dimen20"
+                    android:background="@color/edit_line"
+                    android:visibility="gone" />
+
+                <!--new password-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen10"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dimen30"
+                    android:paddingRight="@dimen/dimen30">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/info486"
+                        android:textColor="@color/theme"
+                        android:textSize="@dimen/text_16" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen40"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/password1"
+                            style="@style/EditTextStyleOne"
+                            android:layout_width="@dimen/dimen0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:hint="@string/info487"
+                            android:inputType="textPassword" />
+
+                        <RelativeLayout
+                            android:id="@+id/deletePassword1"
+                            android:layout_width="@dimen/dimen50"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:padding="@dimen/dimen12"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_delete" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_marginLeft="@dimen/dimen30"
+                    android:layout_marginRight="@dimen/dimen30"
+                    android:background="@color/edit_line" />
+
+                <!--confirm password-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen20"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dimen30"
+                    android:paddingRight="@dimen/dimen30">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/info488"
+                        android:textColor="@color/theme"
+                        android:textSize="@dimen/text_16" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen40"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/password2"
+                            style="@style/EditTextStyleOne"
+                            android:layout_width="@dimen/dimen0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:inputType="textPassword" />
+
+                        <RelativeLayout
+                            android:id="@+id/deletePassword2"
+                            android:layout_width="@dimen/dimen50"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:padding="@dimen/dimen12"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_delete" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/dimen30"
+                    android:layout_marginRight="@dimen/dimen30"
+                    android:background="@color/edit_line" />
+
+            </LinearLayout>
+
+            <Space style="@style/space_40" />
+
+            <Button
+                android:id="@+id/forgetBtn"
+                style="@style/ButtonStyle"
+                android:layout_marginBottom="@dimen/dimen30"
+                android:layout_marginLeft="@dimen/dimen30"
+                android:layout_marginRight="@dimen/dimen30"
+                android:enabled="false"
+                android:text="@string/info489"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_16" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

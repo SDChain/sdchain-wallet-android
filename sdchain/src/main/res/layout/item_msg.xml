@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen80"
+    android:orientation="vertical"
+    tools:context=".ui.activity.MsgListActivity">
+
+    <View
+        style="@style/LineStyle"
+        android:layout_marginRight="@dimen/dimen0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen0"
+        android:layout_weight="1"
+        android:background="@drawable/selector_item"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/dimen10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen0"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/dimen5"
+                android:paddingRight="@dimen/dimen10">
+
+                <TextView
+                    android:id="@+id/msgTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|bottom"
+                    android:textColor="@color/msg_title_text"
+                    android:textSize="@dimen/text_15"
+                    tools:text="收款通知：8929.571429 SDA收款成功" />
+
+                <RelativeLayout
+                    android:id="@+id/msgStatus"
+                    android:layout_width="@dimen/dimen10"
+                    android:layout_height="match_parent">
+
+                    <View
+                        android:layout_width="@dimen/dimen6"
+                        android:layout_height="@dimen/dimen6"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/circle_shape_red" />
+
+                </RelativeLayout>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="@dimen/dimen0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:id="@+id/msgTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right|bottom"
+                    android:textColor="@color/theme_text"
+                    android:textSize="@dimen/text_13"
+                    tools:text="2017/08/18" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/msgContent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen0"
+                android:layout_weight="1"
+                android:paddingTop="@dimen/dimen5"
+                android:textColor="@color/msg_msg_text"
+                android:textSize="@dimen/text_13"
+                tools:text="发送方：0x2255dfd...233312345" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.BillDetailActivity">
+
+    <include layout="@layout/title_toolbar" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dimen10">
+            <!--send-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen60"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/dimen10">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_width="@dimen/dimen100"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/info435"
+                    android:textColor="@color/theme_text"
+                    android:textSize="@dimen/text_16" />
+
+                <TextView
+                    android:id="@+id/payment"
+                    style="@style/TextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:paddingLeft="@dimen/dimen10"
+                    android:textColor="@color/msg_title_text"
+                    android:textSize="@dimen/text_11"
+                    tools:text="Vfshst6774bfbsft545tfvs" />
+            </LinearLayout>
+
+            <!--get-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen60"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/dimen10">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_width="@dimen/dimen100"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/info436"
+                    android:textColor="@color/theme_text"
+                    android:textSize="@dimen/text_16" />
+
+                <TextView
+                    android:id="@+id/receiving"
+                    style="@style/TextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:paddingLeft="@dimen/dimen10"
+                    android:textColor="@color/msg_title_text"
+                    android:textSize="@dimen/text_11"
+                    tools:text="Vfshst6774bfbsft545tfvs" />
+            </LinearLayout>
+
+            <!--balance-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen60"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/dimen10">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_width="@dimen/dimen100"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/info437"
+                    android:textColor="@color/theme_text"
+                    android:textSize="@dimen/text_16" />
+
+                <TextView
+                    android:id="@+id/money"
+                    style="@style/TextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:paddingLeft="@dimen/dimen10"
+                    android:textColor="@color/msg_title_text"
+                    android:textSize="@dimen/text_11"
+                    tools:text="20SDA" />
+            </LinearLayout>
+
+            <!--fee-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen40"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/dimen10">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_width="@dimen/dimen100"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/info438"
+                    android:textColor="@color/theme_text"
+                    android:textSize="@dimen/text_16" />
+
+                <TextView
+                    android:id="@+id/fee"
+                    style="@style/TextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:paddingLeft="10dip"
+                    android:textColor="@color/msg_title_text"
+                    android:textSize="@dimen/text_11"
+                    tools:text="2.00CNY" />
+            </LinearLayout>
+
+            <!--trade time-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen40"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/dimen10">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_width="@dimen/dimen100"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/info439"
+                    android:textColor="@color/theme_text"
+                    android:textSize="@dimen/text_16" />
+
+                <TextView
+                    android:id="@+id/time"
+                    style="@style/TextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:paddingLeft="@dimen/dimen10"
+                    android:textColor="@color/msg_title_text"
+                    android:textSize="@dimen/text_11"
+                    tools:text="2017-08-28 14:12:36" />
+            </LinearLayout>
+
+            <!--trade hash-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen60"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/dimen10">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_width="@dimen/dimen100"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/info440"
+                    android:textColor="@color/theme_text"
+                    android:textSize="@dimen/text_16" />
+
+                <TextView
+                    android:id="@+id/hash"
+                    style="@style/TextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:paddingLeft="@dimen/dimen10"
+                    android:textColor="@color/msg_title_text"
+                    android:textSize="@dimen/text_11"
+                    tools:text="tr45e457y6ybg6564" />
+            </LinearLayout>
+
+            <!--block-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen40"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/dimen10">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_width="@dimen/dimen100"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/info441"
+                    android:textColor="@color/theme_text"
+                    android:textSize="@dimen/text_16" />
+
+                <TextView
+                    android:id="@+id/block"
+                    style="@style/TextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:paddingLeft="@dimen/dimen10"
+                    android:textColor="@color/msg_title_text"
+                    android:textSize="@dimen/text_11"
+                    tools:text="4569878" />
+            </LinearLayout>
+
+            <!--trade type-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen40"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/dimen10">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_width="@dimen/dimen100"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/info442"
+                    android:textColor="@color/theme_text"
+                    android:textSize="@dimen/text_16" />
+
+                <TextView
+                    android:id="@+id/type"
+                    style="@style/TextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:paddingLeft="@dimen/dimen10"
+                    android:textColor="@color/msg_title_text"
+                    android:textSize="@dimen/text_11"
+                    tools:text="@string/info443" />
+            </LinearLayout>
+
+            <!--state-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen40"
+                android:orientation="horizontal"
+                android:paddingRight="@dimen/dimen10">
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/TextViewStyle"
+                    android:layout_width="@dimen/dimen100"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="@string/info444"
+                    android:textColor="@color/theme_text"
+                    android:textSize="@dimen/text_16" />
+
+                <TextView
+                    android:id="@+id/status"
+                    style="@style/TextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical|right"
+                    android:paddingLeft="@dimen/dimen10"
+                    android:textColor="@color/msg_title_text"
+                    android:textSize="@dimen/text_11"
+                    tools:text="@string/info445" />
+            </LinearLayout>
+            <!--memo-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dimen30"
+                android:paddingRight="@dimen/dimen10">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen30"
+                    android:gravity="center_vertical"
+                    android:text="@string/info446"
+                    android:textColor="@color/theme_text"
+                    android:textSize="@dimen/text_16" />
+
+                <TextView
+                    android:id="@+id/remarks"
+                    style="@style/TextViewStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/dimen10"
+                    android:text=""
+                    android:textSize="@dimen/text_11" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

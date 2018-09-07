@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen50"
+    android:background="@drawable/selector_assets_menu"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/dimen20">
+
+    <FrameLayout
+        android:layout_width="@dimen/dimen50"
+        android:layout_height="@dimen/dimen50"
+        android:paddingBottom="@dimen/dimen6"
+        android:paddingTop="@dimen/dimen6">
+
+        <ImageView
+            android:id="@+id/walletImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_wallet_address" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/fragAssetsName"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen3"
+        android:gravity="center_vertical"
+        android:text="@string/info627"
+        android:textSize="@dimen/text_16" />
+
+</LinearLayout>

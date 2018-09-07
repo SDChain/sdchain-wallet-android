@@ -1,0 +1,6 @@
+/build
+/*.prop
+/src/androidTest
+/src/debug
+/src/test
+/keystore

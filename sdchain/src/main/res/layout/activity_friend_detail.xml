@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.FriendDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:paddingTop="@dimen/paddingTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:elevation="0dip">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/theme"
+            android:theme="@style/ToolBarWithNavigationBack">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_18" />
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen100"
+                android:background="@color/theme">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen80"
+                    android:background="@color/theme">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_userpic"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen100"
+                android:background="@color/theme"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/dimen0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/add_or_del_friend"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen60"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="@dimen/dimen40"
+                            android:layout_height="@dimen/dimen0"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen2">
+
+                            <ImageView
+                                android:id="@+id/add_or_del_friend_img"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/selector_friend_detail_add"/>
+                        </FrameLayout>
+
+                        <TextView
+                            android:id="@+id/add_or_del_friend_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen0"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="@dimen/dimen5"
+                            android:text="@string/info496"
+                            android:textColor="@drawable/selector_text_color_white"
+                            android:textSize="@dimen/text_16"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/pay_to_friend"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen60"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="@dimen/dimen40"
+                            android:layout_height="@dimen/dimen0"
+                            android:layout_weight="1"
+                            android:padding="@dimen/dimen2">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/selector_friend_detail_pay"/>
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dimen0"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:paddingTop="@dimen/dimen5"
+                            android:text="@string/info497"
+                            android:textColor="@drawable/selector_text_color_white"
+                            android:textSize="@dimen/text_16"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <!--wallet address-->
+            <LinearLayout
+                android:id="@+id/friend_wallet_address"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen50"
+                android:background="@drawable/selector_item"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextViewStyle"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dimen20"
+                    android:text="@string/info498"
+                    android:textSize="@dimen/text_16"/>
+
+                <RelativeLayout
+                    android:layout_width="40dip"
+                    android:layout_height="match_parent"
+                    android:padding="13dip">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_tonext"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                style="@style/LineStyle"
+                android:visibility="gone"/>
+
+            <!--info-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <!--real name-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="0dip"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/dimen20"
+                        android:text="@string/info499"
+                        android:textSize="@dimen/text_16"/>
+
+                    <TextView
+                        android:id="@+id/realName"
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:paddingRight="@dimen/dimen20"
+                        android:textColor="@color/theme_text"
+                        android:textSize="@dimen/text_16"
+                        tools:text="钱*"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

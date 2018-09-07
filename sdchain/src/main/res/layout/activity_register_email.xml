@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.activity.RegisterEmailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen200">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen200"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_logo_bg" />
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen20"
+            android:background="@color/translation"
+            android:theme="@style/ToolBarWithNavigationBack">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_18" />
+        </android.support.v7.widget.Toolbar>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen20"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <!--email-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen10"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dimen30"
+                    android:paddingRight="@dimen/dimen30">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/info63"
+                        android:textColor="@color/theme"
+                        android:textSize="@dimen/text_16" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen40"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/email"
+                            style="@style/EditTextStyleOne"
+                            android:layout_width="@dimen/dimen0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1" />
+
+                        <RelativeLayout
+                            android:id="@+id/deleteEmail"
+                            android:layout_width="@dimen/dimen40"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:padding="@dimen/dimen13"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_delete" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/dimen30"
+                    android:layout_marginRight="@dimen/dimen30"
+                    android:background="@color/edit_line" />
+
+
+                <!--code-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen20"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dimen30"
+                    android:paddingRight="@dimen/dimen30">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/info57"
+                        android:textColor="@color/theme"
+                        android:textSize="@dimen/text_16" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dimen40"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/code"
+                            style="@style/EditTextStyleOne"
+                            android:layout_width="@dimen/dimen0"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:inputType="number" />
+
+                        <RelativeLayout
+                            android:id="@+id/deleteCode"
+                            android:layout_width="@dimen/dimen40"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:padding="@dimen/dimen13"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_delete" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/timerDown"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical|right"
+                            android:paddingRight="@dimen/dimen13"
+                            android:text="@string/info65"
+                            android:textColor="@color/theme"
+                            android:textSize="@dimen/text_14" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px1"
+                    android:layout_marginLeft="@dimen/dimen30"
+                    android:layout_marginRight="@dimen/dimen30"
+                    android:background="@color/edit_line" />
+
+            </LinearLayout>
+
+            <Space style="@style/space_30" />
+
+            <Button
+                android:id="@+id/emailRegisterBtn"
+                style="@style/ButtonStyle"
+                android:layout_marginBottom="@dimen/dimen30"
+                android:layout_marginLeft="@dimen/dimen30"
+                android:layout_marginRight="@dimen/dimen30"
+                android:layout_marginTop="@dimen/dimen30"
+                android:enabled="false"
+                android:text="@string/info634"
+                android:textSize="@dimen/text_16" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/phone_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dimen10"
+            android:gravity="center"
+            android:text="@string/info635"
+            android:textColor="@color/theme"
+            android:textSize="@dimen/text_14" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

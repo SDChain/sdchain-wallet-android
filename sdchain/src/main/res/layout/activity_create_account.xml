@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.CreateAccountActivity">
+
+    <include layout="@layout/title_bar_text_right" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen10" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen50"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="@dimen/dimen40"
+            android:layout_height="match_parent"
+            android:padding="@dimen/dimen8">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@mipmap/ic_create_account_attention" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="@string/info473"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen60"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen10"
+            android:paddingRight="@dimen/dimen10">
+
+            <LinearLayout
+                android:layout_width="@dimen/dimen0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen0"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/info474"
+                    android:textColor="@color/big_text"
+                    android:textSize="@dimen/text_20"/>
+
+                <TextView
+                    android:id="@+id/account"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen0"
+                    android:layout_weight="1"
+                    android:textColor="@color/big_text"
+                    android:textSize="@dimen/text_12"
+                    tools:text="xxs789fjhjuSjfis8DSD999mmvd9jjv"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/accountBtn"
+                android:layout_width="@dimen/dimen70"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_text_btn"
+                android:gravity="center"
+                android:padding="@dimen/dimen5"
+                android:text="@string/info475"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_14"/>
+
+        </LinearLayout>
+
+        <View style="@style/LineStyle"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen150">
+
+            <ImageView
+                android:id="@+id/accountImage"
+                android:layout_width="@dimen/dimen150"
+                android:layout_height="@dimen/dimen150"
+                android:layout_gravity="center"
+                tools:src="@mipmap/ic_test_code"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen10" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen10" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen60"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/dimen10"
+            android:paddingRight="@dimen/dimen10">
+
+            <LinearLayout
+                android:layout_width="@dimen/dimen0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen0"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/info476"
+                    android:textColor="@color/big_text"
+                    android:textSize="@dimen/text_20" />
+
+                <TextView
+                    android:id="@+id/secret"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen0"
+                    android:layout_weight="1"
+                    android:textColor="@color/big_text"
+                    android:textSize="@dimen/text_12"
+                    tools:text="xxs789fjhjuSjfis8DSD999mmvd9jjv" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/secretBtn"
+                android:layout_width="@dimen/dimen70"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/selector_text_btn"
+                android:gravity="center"
+                android:padding="@dimen/dimen5"
+                android:text="@string/info477"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_14" />
+
+        </LinearLayout>
+
+        <View style="@style/LineStyle" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen150">
+
+            <ImageView
+                android:id="@+id/secretImage"
+                android:layout_width="@dimen/dimen150"
+                android:layout_height="@dimen/dimen150"
+                android:layout_gravity="center"
+                tools:src="@mipmap/ic_test_code" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

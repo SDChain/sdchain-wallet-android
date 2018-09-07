@@ -1,0 +1,179 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:actionBarSize">@dimen/dimen46</item>
+
+        <!--more touch-->
+        <item name="android:splitMotionEvents">false</item>
+
+    </style>
+
+    <!--button-style-->
+    <style name="ButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dimen50</item>
+        <item name="android:layout_marginLeft">@dimen/dimen20</item>
+        <item name="android:layout_marginRight">@dimen/dimen20</item>
+        <item name="android:background">@drawable/selector_button</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">@dimen/text_14</item>
+    </style>
+
+    <!--splash-->
+    <style name="SplashTheme" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/splash</item>
+    </style>
+
+    <!--button-style-->
+    <style name="ButtonStyle2">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dimen50</item>
+        <item name="android:layout_marginLeft">@dimen/dimen20</item>
+        <item name="android:layout_marginRight">@dimen/dimen20</item>
+        <item name="android:background">@drawable/selector_button2</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_14</item>
+    </style>
+
+    <!--edit-->
+    <style name="EditTextStyle">
+        <item name="android:background">@null</item>
+        <item name="android:textColor">@color/theme_text_deep</item>
+        <item name="android:textSize">@dimen/text_16</item>
+        <item name="android:textCursorDrawable">@drawable/edit_cursor</item>
+        <item name="android:textColorHint">@color/gray</item>
+    </style>
+
+    <!--one line input-->
+    <style name="EditTextStyleOne" parent="EditTextStyle">
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <!--number one line input-->
+    <style name="EditTextStyleNum" parent="EditTextStyleOne">
+        <item name="android:inputType">number</item>
+    </style>
+
+
+    <!--text style-->
+    <style name="TextViewStyle">
+        <item name="android:textSize">@dimen/text_14</item>
+        <item name="android:textColor">@color/theme_text_deep</item>
+    </style>
+
+    <!--space 20dip-->
+    <style name="LineStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/px1</item>
+        <item name="android:layout_marginLeft">@dimen/dimen20</item>
+        <item name="android:layout_marginRight">@dimen/dimen20</item>
+        <item name="android:background">@color/theme_light</item>
+    </style>
+
+    <!--Space-->
+    <style name="space_10">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dimen10</item>
+    </style>
+
+    <style name="space_20">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dimen20</item>
+    </style>
+
+    <style name="space_30">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dimen30</item>
+    </style>
+
+    <style name="space_40">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dimen40</item>
+    </style>
+
+    <style name="picture.default.style" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/bar_grey</item>
+        <item name="colorPrimaryDark">@color/bar_grey</item>
+        <item name="picture.statusFontColor">false</item>
+        <item name="picture.leftBack.icon">@drawable/picture_back</item>
+        <item name="picture.arrow_down.icon">@drawable/arrow_down</item>
+        <item name="picture.arrow_up.icon">@drawable/arrow_up</item>
+        <item name="picture.title.textColor">@color/white</item>
+        <item name="picture.right.textColor">@color/white</item>
+        <item name="picture.checked.style">@drawable/picture_checkbox_selector</item>
+        <item name="picture.style.checkNumMode">false</item>
+        <item name="picture.style.numComplete">false</item>
+        <item name="picture.bottom.bg">@color/color_fa</item>
+        <item name="picture.preview.textColor">@color/tab_color_true</item>
+        <item name="picture.complete.textColor">@color/tab_color_true</item>
+        <item name="picture.num.style">@drawable/num_oval</item>
+        <item name="picture.ac_preview.title.textColor">@color/white</item>
+        <item name="picture.ac_preview.complete.textColor">@color/tab_color_true</item>
+        <item name="picture.ac_preview.title.bg">@color/bar_grey</item>
+        <item name="picture.ac_preview.bottom.bg">@color/bar_grey_90</item>
+        <item name="picture.status.color">@color/bar_grey_90</item>
+        <item name="picture.preview.leftBack.icon">@drawable/picture_back</item>
+        <item name="picture.preview.statusFontColor">false</item>
+        <item name="picture.crop.toolbar.bg">@color/bar_grey</item>
+        <item name="picture.crop.status.color">@color/bar_grey</item>
+        <item name="picture.crop.title.color">@color/white</item>
+        <item name="picture.folder_checked_dot">@drawable/orange_oval</item>
+    </style>
+
+    <style name="ToolBarWithNavigationBack">
+        <item name="navigationIcon">@drawable/abc_ic_ab_back_material</item>
+        <item name="android:textSize">@dimen/text_15</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+    </style>
+
+    <style name="ToolBar_Mine" parent="Widget.AppCompat.Toolbar">
+        <item name="android:textSize">@dimen/text_15</item>
+        <item name="actionMenuTextColor">@android:color/white</item>
+    </style>
+
+    <style name="add_friend_scan">
+        <item name="android:layout_width">?attr/actionBarSize</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">end|right</item>
+        <item name="android:padding">@dimen/dimen18</item>
+    </style>
+
+    <style name="bill_choose_record" parent="add_friend_scan"></style>
+
+    <style name="friend_add" parent="add_friend_scan"></style>
+
+    <style name="DrawerLayout" parent="AppTheme"></style>
+
+    <style name="login_text">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/text_16</item>
+        <item name="android:textColor">@color/theme</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="login_editText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@color/edit_line_hint</item>
+        <item name="colorControlActivated">@color/edit_line</item>
+    </style>
+
+    <style name="titlebar_back">
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+    </style>
+
+    <style name="popup_window_anim">
+        <item name="android:windowEnterAnimation">@anim/alpha_in</item>
+        <item name="android:windowExitAnimation">@anim/alpha_out</item>
+    </style>
+
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen51"
+    android:background="@color/color_F4F4F4"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/currency"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen50"
+        android:gravity="center"
+        android:textColor="@color/currency_text"
+        android:textSize="@dimen/text_18"/>
+
+    <View
+        style="@style/LineStyle"
+        android:layout_marginLeft="@dimen/dimen0"
+        android:layout_marginRight="@dimen/dimen0"/>
+</LinearLayout>

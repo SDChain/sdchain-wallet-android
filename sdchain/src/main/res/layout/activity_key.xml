@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.activity.KeyActivity">
+
+    <!--title-->
+    <include layout="@layout/title_toolbar" />
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <Space style="@style/space_20" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen60"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dimen30"
+                android:paddingRight="@dimen/dimen30">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/dimen60"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_wallet_address" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/dimen0"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dimen10"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/realName"
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen0"
+                        android:layout_weight="1"
+                        android:gravity="bottom"
+                        android:paddingBottom="@dimen/dimen3"
+                        tools:text="钱*"
+                        android:textSize="@dimen/text_16" />
+
+                    <TextView
+                        android:id="@+id/userName"
+                        style="@style/TextViewStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dimen0"
+                        android:layout_weight="1"
+                        android:gravity="top"
+                        android:paddingTop="@dimen/dimen3"
+                        tools:text="UID: 5041123"
+                        android:textSize="@dimen/text_16" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/dimen80"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_key_secret" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <Space style="@style/space_20" />
+
+
+            <!--qr code-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen180"
+                android:gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/watch"
+                    android:layout_width="@dimen/dimen180"
+                    android:layout_height="@dimen/dimen180"
+                    android:background="@drawable/relative_shape">
+
+                    <ImageView
+                        android:id="@+id/imageCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@mipmap/ic_key_secret" />
+
+                    <TextView
+                        android:id="@+id/attention"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/dimen20"
+                        android:gravity="center"
+                        android:text="@string/info503"
+                        android:textColor="@color/theme_text"
+                        android:textSize="@dimen/text_14" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <Space style="@style/space_20" />
+
+            <LinearLayout
+                android:id="@+id/doKey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/info504"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/text_16" />
+
+                <Button
+                    android:id="@+id/copyBtn"
+                    style="@style/ButtonStyle2"
+                    android:layout_marginLeft="@dimen/dimen30"
+                    android:layout_marginRight="@dimen/dimen30"
+                    android:layout_marginTop="@dimen/dimen20"
+                    android:text="@string/info505"
+                    android:textColor="@drawable/selector_text2"
+                    android:textSize="@dimen/text_16" />
+
+                <Button
+                    android:id="@+id/saveBtn"
+                    style="@style/ButtonStyle2"
+                    android:layout_marginBottom="@dimen/dimen30"
+                    android:layout_marginLeft="@dimen/dimen30"
+                    android:layout_marginRight="@dimen/dimen30"
+                    android:layout_marginTop="@dimen/dimen20"
+                    android:text="@string/info506"
+                    android:textColor="@drawable/selector_text2"
+                    android:textSize="@dimen/text_16" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

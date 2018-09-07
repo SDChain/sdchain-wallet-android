@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.io.sdchain.ui.activity.AddWalletActivity">
+
+    <include layout="@layout/title_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_create_wallet"
+            style="@style/ButtonStyle"
+            android:layout_marginTop="@dimen/dimen40"
+            android:text="@string/info429"/>
+
+        <Button
+            android:id="@+id/btn_import_wallet"
+            style="@style/ButtonStyle"
+            android:layout_marginBottom="@dimen/dimen80"
+            android:layout_marginTop="@dimen/dimen60"
+            android:text="@string/info430"/>
+
+    </LinearLayout>
+
+</LinearLayout>
