@@ -74,6 +74,8 @@ public class EventBusType {
         SELLTOBUY,
         //get all token name
         ALLCODES,
+        //credit
+        CREDIT,
     }
 
 }

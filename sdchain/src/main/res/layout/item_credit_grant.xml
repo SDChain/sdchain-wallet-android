@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dimen60"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen60"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/logo"
+            android:layout_width="@dimen/dimen60"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimen10"
+            android:padding="@dimen/dimen10">
+
+            <ImageView
+                android:id="@+id/tokenLogo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:src="@mipmap/ic_sda_3" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tokenName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen25"
+                android:gravity="bottom"
+                android:textColor="@color/credit_grant_text"
+                android:textSize="@dimen/text_14"
+                android:textStyle="bold"
+                tools:text="SDA" />
+
+            <TextView
+                android:id="@+id/tokenAddress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dimen5"
+                android:gravity="center|left|top"
+                android:textColor="@color/credit_grant_text"
+                android:textSize="@dimen/text_12"
+                tools:text="0xfhBc74fbdDasasafsfafdaasdasnfHye6asdfrD473gfbsjaf" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/creditGrantSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="@dimen/dimen20">
+
+            <TextView
+                android:id="@+id/grant"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen24"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dimen12"
+                android:paddingRight="@dimen/dimen12"
+                android:text="@string/info670"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_10"
+                tools:background="@drawable/selector_grant" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/LineStyle"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dimen20"
+        android:layout_marginRight="@dimen/dimen0" />
+
+</RelativeLayout>

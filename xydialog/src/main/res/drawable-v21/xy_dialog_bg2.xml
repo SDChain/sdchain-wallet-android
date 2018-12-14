@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/xydialog_colorRipple">
+    <item>
+        <shape>
+            <corners android:radius="10dip" />
+            <solid android:color="@color/xydialog_colorBackground" />
+        </shape>
+    </item>
+</ripple>

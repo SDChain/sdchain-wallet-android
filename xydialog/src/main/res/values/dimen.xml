@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="sec_height">35dip</dimen>
+    <dimen name="agreement_max_height">300dip</dimen>
+    <dimen name="agreement_text_size">14sp</dimen>
+
+</resources>

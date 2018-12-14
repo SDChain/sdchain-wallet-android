@@ -212,6 +212,53 @@
                     android:layout_marginLeft="@dimen/dimen0"
                     android:layout_marginRight="@dimen/dimen0"/>
 
+                <!--trust-->
+                <LinearLayout
+                    android:id="@+id/mine_credit_grant"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dimen50"
+                    android:background="@drawable/selector_item"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen15">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_mine_credit_grant" />
+                    </RelativeLayout>
+
+                    <TextView
+                        style="@style/TextViewStyle"
+                        android:layout_width="@dimen/dimen0"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="@string/key000163"
+                        android:textSize="@dimen/text_16" />
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/dimen50"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/dimen17">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@mipmap/ic_tonext" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/LineStyle"
+                    android:layout_marginLeft="@dimen/dimen0"
+                    android:layout_marginRight="@dimen/dimen0" />
+
+
                 <View
                     style="@style/space_10"
                     android:background="@color/theme_bg"/>

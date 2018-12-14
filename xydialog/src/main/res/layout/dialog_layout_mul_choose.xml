@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/xy_dialog_bg"
+    android:orientation="vertical"
+    android:padding="20dip">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="40dip"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/xydialog_colorTitle"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:layout_marginTop="20dip"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/negativeButton"
+            style="@style/Dialog.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:gravity="center"
+            android:textColor="@color/xy_selector_text" />
+
+        <Space
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/positiveButton"
+            style="@style/Dialog.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_gravity="end|right"
+            android:textColor="@color/xy_selector_text" />
+    </LinearLayout>
+
+</LinearLayout>

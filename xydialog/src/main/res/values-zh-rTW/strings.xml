@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">xydialog</string>
+    <string name="num_and_char">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="test_big"></string>
+    <string name="xydialog2_refresh">刷新</string>
+    <string name="info0001">請輸入圖形驗證碼</string>
+    <string name="info0002">確定</string>
+    <string name="info0003">取消</string>
+    <string name="info0004">現在升級</string>
+    <string name="info0005">不，謝謝</string>
+</resources>

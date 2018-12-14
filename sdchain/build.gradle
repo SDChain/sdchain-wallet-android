@@ -64,8 +64,8 @@ android {
         applicationId "com.io.sdchain"
         minSdkVersion 18
         targetSdkVersion 23
-        versionCode 5
-        versionName "1.0.0.5"
+        versionCode 1
+        versionName "1.0.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         flavorDimensions "versionCode"
         ndk {
@@ -111,7 +111,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     testImplementation 'junit:junit:4.12'
-
     implementation project(':datepick')
     implementation files('libs/pinyin4j-2.5.0.jar')
     implementation rootProject.ext.dependencies["appcompat-v7"]
@@ -127,7 +126,6 @@ dependencies {
     implementation rootProject.ext.dependencies["logger"]
     implementation rootProject.ext.dependencies["SmartRefreshLayout"]
     implementation rootProject.ext.dependencies["picture-library"]
-    implementation rootProject.ext.dependencies["xydialog"]
     implementation rootProject.ext.dependencies["multidex"]
     implementation rootProject.ext.dependencies["volley-library"]
     implementation rootProject.ext.dependencies["gson"]
@@ -142,5 +140,5 @@ dependencies {
     annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
     annotationProcessor rootProject.ext.dependencies["arouter-compiler"]
     implementation rootProject.ext.dependencies["zbarlibary"]
-
+    implementation project(':xydialog')
 }

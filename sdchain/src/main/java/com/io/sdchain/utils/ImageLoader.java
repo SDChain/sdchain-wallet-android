@@ -170,15 +170,15 @@ public class ImageLoader {
     /**
      *
      * @param url
-     * @param placeholder
+     * @param error
      * @param imageView
      */
-    public static void loadImage(String url, int placeholder, ImageView imageView) {
+    public static void loadImage(String url, int error, ImageView imageView) {
         RequestBuilder<Drawable> requestBuilder = Glide
                 .with(BaseApplication.getContext())
                 .load(url);
         RequestOptions options = new RequestOptions()
-                .placeholder(placeholder);
+                .error(error);
         requestBuilder
                 .apply(options)
                 .transition(new DrawableTransitionOptions().crossFade())
@@ -188,17 +188,17 @@ public class ImageLoader {
     /**
      *
      * @param url
-     * @param placeholder
+     * @param error
      * @param imageView
      */
-    public static void loadRoundImage(String url, int placeholder, ImageView imageView) {
+    public static void loadRoundImage(String url, int error, ImageView imageView) {
         RequestBuilder<Drawable> requestBuilder = Glide
                 .with(BaseApplication.getContext())
                 .load(url);
         requestBuilder
                 .apply(RequestOptions
                         .bitmapTransform(new CircleTransform())
-                        .placeholder(placeholder)
+                        .error(error)
                 )
                 .transition(new DrawableTransitionOptions().crossFade())
                 .into(imageView);
@@ -207,17 +207,17 @@ public class ImageLoader {
     /**
      *
      * @param url
-     * @param placeholder
+     * @param error
      * @param imageView
      */
-    public static void loadRoundBorderImage(String url, int placeholder, ImageView imageView) {
+    public static void loadRoundBorderImage(String url, int error, ImageView imageView) {
         RequestBuilder<Drawable> requestBuilder = Glide
                 .with(BaseApplication.getContext())
                 .load(url);
         requestBuilder
                 .apply(RequestOptions
                         .bitmapTransform(new CircleBorderTransform())
-                        .placeholder(placeholder)
+                        .error(error)
                 )
                 .transition(new DrawableTransitionOptions().crossFade())
                 .into(imageView);
@@ -226,18 +226,18 @@ public class ImageLoader {
     /**
      *
      * @param url
-     * @param placeholder
+     * @param error
      * @param borderWidth
      * @param imageView
      */
-    public static void loadRoundBorderImage(String url, int placeholder, float borderWidth, ImageView imageView) {
+    public static void loadRoundBorderImage(String url, int error, float borderWidth, ImageView imageView) {
         RequestBuilder<Drawable> requestBuilder = Glide
                 .with(BaseApplication.getContext())
                 .load(url);
         requestBuilder
                 .apply(RequestOptions
                         .bitmapTransform(new CircleBorderTransform(borderWidth))
-                        .placeholder(placeholder)
+                        .error(error)
                 )
                 .transition(new DrawableTransitionOptions().crossFade())
                 .into(imageView);
@@ -246,19 +246,19 @@ public class ImageLoader {
     /**
      *
      * @param url
-     * @param placeholder
+     * @param error
      * @param borderWidth
      * @param borderColor
      * @param imageView
      */
-    public static void loadRoundBorderImage(String url, int placeholder, float borderWidth, int borderColor, ImageView imageView) {
+    public static void loadRoundBorderImage(String url, int error, float borderWidth, int borderColor, ImageView imageView) {
         RequestBuilder<Drawable> requestBuilder = Glide
                 .with(BaseApplication.getContext())
                 .load(url);
         requestBuilder
                 .apply(RequestOptions
                         .bitmapTransform(new CircleBorderTransform(borderWidth, borderColor))
-                        .placeholder(placeholder)
+                        .error(error)
                 )
                 .transition(new DrawableTransitionOptions().crossFade())
                 .into(imageView);

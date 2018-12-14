@@ -1,1 +1,1 @@
-include ':sdchain', ':datepick', ':zbarlibary'
+include ':sdchain', ':datepick', ':zbarlibary', ':xydialog'

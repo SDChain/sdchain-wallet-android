@@ -165,6 +165,13 @@
             android:name="com.io.sdchain.ui.activity.ImportWalletActivity"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".ui.activity.CreditGrantActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.CreditGrantRecordActivity"
+            android:screenOrientation="portrait" />
+
     </application>
 
 </manifest>

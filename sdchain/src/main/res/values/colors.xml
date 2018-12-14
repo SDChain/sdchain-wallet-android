@@ -77,5 +77,8 @@
 
     <color name="common_blue_0090FF">#2269D4</color>
 
+    <color name="grey2">#CCCCCC</color>
+    <color name="orange1">#ff812d</color>
+
 
 </resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#355106</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="theme">#2269D4</color>
+    <color name="theme_pressed">#638FFF</color>
+    <color name="theme_text">#10000000</color>
+    <color name="theme_text_deep">#000000</color>
+
+    <color name="xydialog_colorTitle">#000000</color>
+    <color name="xydialog_colorMessage">#000000</color>
+    <color name="xydialog_colorEditText">#000000</color>
+    <color name="xydialog_colorProgressBar">#63AEFF</color>
+    <color name="xydialog_colorBackground">#ffffff</color>
+    <color name="xydialog_colorRipple">#63AEFF</color>
+    <color name="xydialog_colorButton_un">#000000</color>
+    <color name="xydialog_colorButton">#63AEFF</color>
+    <color name="xydialog_colorLine">#efeff5</color>
+    <color name="xydialog_colorSingle">#2269D4</color>
+
+    <color name="common_blue_0090FF">#1D75F2</color>
+</resources>

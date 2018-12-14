@@ -135,7 +135,12 @@
     <string name="info148">账单详情</string>
     <string name="info149">转出</string>
     <string name="info150">转入</string>
+    <string name="key000163">授信</string>
 
+    <string name="info168">获取授信列表...</string>
+    <string name="info169">正在授信...</string>
+    <string name="info170">正在取消授信...</string>
+    <string name="info171">获取授信列表...</string>
     <string name="info172">发款通知：</string>
     <string name="info173">收款通知：</string>
     <string name="info174">发款成功</string>
@@ -173,6 +178,13 @@
     <string name="info210">确认保存好了公钥私钥吗？</string>
     <string name="info211">确定</string>
     <string name="info212">取消</string>
+    <string name="info213">授信</string>
+    <string name="info214">授信记录</string>
+    <string name="info215">钱包密码</string>
+    <string name="info216">确认</string>
+    <string name="info217">请输入钱包密码</string>
+    <string name="info218">忘记密码</string>
+    <string name="info219">授信记录</string>
     <string name="info220">密码修改成功，请登录</string>
     <string name="info221">密码不能为空</string>
     <string name="info222">密码不是6到16位</string>
@@ -381,6 +393,8 @@
     <string name="info475">复制</string>
     <string name="info476">私钥</string>
     <string name="info477">复制</string>
+    <string name="info478">注：授信后才能接收转账，授信需要输入钱包密码；\n钱包不对任何二级资产发行方进行背书，请为自己的授信行为负责。</string>
+
     <string name="info481">账号</string>
     <string name="info482">验证码</string>
     <string name="info483">获取验证码</string>
@@ -534,17 +548,17 @@
     <string name="info667"></string>
     <string name="info668"></string>
 
-    <string name="info670"></string>
-    <string name="info671"></string>
-    <string name="info672"></string>
-    <string name="info673"></string>
-    <string name="info674"></string>
-    <string name="info675"></string>
+    <string name="info670">取消授信</string>
+    <string name="info671">\u3000授信\u3000</string>
+    <string name="info672">是否取消授信%s?</string>
+    <string name="info673">确定</string>
+    <string name="info674">取消</string>
+    <string name="info675">是否授信%s?</string>
     <string name="info676"></string>
     <string name="info677"></string>
     <string name="info678"></string>
-    <string name="info679"></string>
-    <string name="info680"></string>
+    <string name="info679">重输密码</string>
+    <string name="info680">忘记密码</string>
     <string name="info681"></string>
     <string name="info682"></string>
     <string name="info683"></string>

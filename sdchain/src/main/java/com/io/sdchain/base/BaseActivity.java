@@ -66,6 +66,10 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
         ((BaseApplication) getApplication()).setContext(this);
     }
 
+    protected <T> boolean notNull(T t) {
+        return t != null;
+    }
+
     /**
      * check input is null or not
      */

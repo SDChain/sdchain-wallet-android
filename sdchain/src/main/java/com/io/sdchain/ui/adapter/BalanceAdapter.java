@@ -49,9 +49,9 @@ public final class BalanceAdapter extends BaseAdapter<BalanceBean> {
                     holder.setText(R.id.value, "" + new BigDecimal(datas.get(position).getValue()).setScale(6, BigDecimal.ROUND_HALF_UP));
                 }
                 if (datas.get(position).getCurrency().equals(Constants.SDA)) {
-                    ImageLoader.loadImage(datas.get(position).getPic(), R.mipmap.ic_sda_3, R.mipmap.ic_sda_3, holder.getView(R.id.balanceLogo));
+                    ImageLoader.loadImage(datas.get(position).getPic(), R.mipmap.ic_sda_3, holder.getView(R.id.balanceLogo));
                 } else {
-                    ImageLoader.loadImage(datas.get(position).getPic(), R.mipmap.ic_launcher_error, R.mipmap.ic_launcher_error, holder.getView(R.id.balanceLogo));
+                    ImageLoader.loadImage(datas.get(position).getPic(), R.mipmap.ic_launcher_error, holder.getView(R.id.balanceLogo));
                 }
             }
         }

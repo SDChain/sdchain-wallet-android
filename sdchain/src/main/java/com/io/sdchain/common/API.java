@@ -220,4 +220,19 @@ public class API {
      */
     public static final String IMPORTWALLET = BASEURL + "resSDnWalt/payment/importWallet";
 
+    /**
+     * git coin list
+     */
+    public static final String GETCURRENCYLISTS = BASEURL + "resSDnWalt/payment/getCurrencyLists";
+
+    /**
+     * trust
+     */
+    public static final String TRUSTLINE = BASEURL + "resSDnWalt/payment/trustline";
+
+    /**
+     * cancel trust
+     */
+    public static final String CANCELTRUSTLINE = BASEURL + "resSDnWalt/payment/cancelTrustline";
+
 }

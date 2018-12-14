@@ -136,6 +136,12 @@
     <string name="info149">Transfer</string>
     <string name="info150">Receive</string>
 
+    <string name="key000163">Credit</string>
+
+    <string name="info168">Get a credit list...</string>
+    <string name="info169">Granting credit...</string>
+    <string name="info170">Canceling credit...</string>
+    <string name="info171">Get a credit list...</string>
     <string name="info172">Transfer amount:</string>
     <string name="info173">Transfer amount:</string>
     <string name="info174">Send Succring</string>
@@ -173,6 +179,13 @@
     <string name="info210">Are you sure you have saved the public key private key?</string>
     <string name="info211">Confirm</string>
     <string name="info212">Cancel</string>
+    <string name="info213">Credit</string>
+    <string name="info214">Credit record</string>
+    <string name="info215">Wallet password</string>
+    <string name="info216">Confirm</string>
+    <string name="info217">Please enter your wallet password</string>
+    <string name="info218">Forget password</string>
+    <string name="info219">Credit record</string>
     <string name="info220">The password has been modified successfully. Please log in.</string>
     <string name="info221">Password can not be blank</string>
     <string name="info222">Password is not 6 to 16 digits</string>
@@ -381,6 +394,7 @@
     <string name="info475">Copy</string>
     <string name="info476">Private Key</string>
     <string name="info477">Copy</string>
+    <string name="info478">Enter the password for credit before receiving the transfer.\nThe wallet does not endorse any secondary asset issuer.</string>
     <string name="info481">Account</string>
     <string name="info482">Verification Code</string>
     <string name="info483">Get Code</string>
@@ -534,17 +548,17 @@
     <string name="info667"></string>
     <string name="info668"></string>
 
-    <string name="info670"></string>
-    <string name="info671"></string>
-    <string name="info672"></string>
-    <string name="info673"></string>
-    <string name="info674"></string>
-    <string name="info675"></string>
+    <string name="info670">cancel</string>
+    <string name="info671">credit\u0020</string>
+    <string name="info672">Is the credit %s cancelled ?</string>
+    <string name="info673">Confirm</string>
+    <string name="info674">Cancel</string>
+    <string name="info675">Is credit granted to %s ?</string>
     <string name="info676"></string>
     <string name="info677"></string>
     <string name="info678"></string>
-    <string name="info679"></string>
-    <string name="info680"></string>
+    <string name="info679">Re-enter</string>
+    <string name="info680">Forget</string>
     <string name="info681"></string>
     <string name="info682"></string>
     <string name="info683"></string>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="100dip"
+        android:layout_height="100dip"
+        android:layout_gravity="center"
+        android:background="@drawable/dialog_bg">
+
+        <ImageView
+            android:id="@+id/dialogImage"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_gravity="center"
+            android:src="@drawable/dialog_rotate" />
+    </FrameLayout>
+
+</FrameLayout>

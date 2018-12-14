@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/xy_dialog_bg"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/codeImage"
+        android:layout_width="match_parent"
+        android:layout_height="120dip"
+        android:background="#CCCCCC"
+        android:scaleType="fitXY"/>
+
+    <RelativeLayout
+        android:id="@+id/refreshCode"
+        android:layout_width="match_parent"
+        android:layout_height="40dip">
+
+        <TextView
+            android:id="@+id/hint"
+            style="@style/sev_warn_style"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text=""/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/refreshImage"
+            android:gravity="center"
+            android:text="@string/xydialog2_refresh"
+            android:textColor="@color/common_blue_0090FF"
+            android:textSize="14sp"/>
+
+        <ImageView
+            android:id="@+id/refreshImage"
+            android:layout_width="40dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:padding="12dip"
+            android:src="@mipmap/ic_refresh_code"/>
+    </RelativeLayout>
+
+    <com.xiey94.xydialog.view.SecurityCodeView
+        android:id="@+id/securityCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="20dip"
+        android:layout_marginLeft="10dip"
+        android:layout_marginRight="10dip"/>
+
+
+</LinearLayout>

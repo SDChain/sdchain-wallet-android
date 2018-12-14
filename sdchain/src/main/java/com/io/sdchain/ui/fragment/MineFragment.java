@@ -68,6 +68,8 @@ public final class MineFragment extends BaseFragment<MineFragmentPresenter> impl
     public LinearLayout mine_setting;
     @BindView(R.id.mine_change_wallet_password)
     public LinearLayout mine_change_wallet_password;
+    @BindView(R.id.mine_credit_grant)
+    public LinearLayout mine_credit_grant;
     @BindView(R.id.imageView)
     public ImageView imageView;
     @BindView(R.id.userName)
@@ -147,7 +149,9 @@ public final class MineFragment extends BaseFragment<MineFragmentPresenter> impl
 
     }
 
-    @OnClick({R.id.mine_wallet_address, R.id.mine_friends, R.id.mine_bill, R.id.mine_update, R.id.mine_content, R.id.mine_message, R.id.mine_setting, R.id.mine_change_wallet_password})
+    @OnClick({R.id.mine_wallet_address, R.id.mine_friends, R.id.mine_bill, R.id.mine_update,
+            R.id.mine_content, R.id.mine_message, R.id.mine_setting,
+            R.id.mine_change_wallet_password, R.id.mine_credit_grant})
     public void onClickView(View view) {
         switch (view.getId()) {
             case R.id.mine_content:
@@ -184,6 +188,12 @@ public final class MineFragment extends BaseFragment<MineFragmentPresenter> impl
                 //Change payment password
                 ARouter.getInstance()
                         .build(ARouterPath.SetWalletPwdActivity)
+                        .navigation();
+                break;
+            case R.id.mine_credit_grant:
+                //trust
+                ARouter.getInstance()
+                        .build(ARouterPath.CreditGrantActivity)
                         .navigation();
                 break;
             case R.id.mine_friends:
@@ -269,8 +279,6 @@ public final class MineFragment extends BaseFragment<MineFragmentPresenter> impl
     }
 
     /**
-     * 下载
-     *
      * @return
      */
     public void downLoadApk(String url) {
@@ -281,7 +289,6 @@ public final class MineFragment extends BaseFragment<MineFragmentPresenter> impl
         getActivity().startService(updateIntent);
     }
 
-    //实例化
     public static MineFragment newInstance(String argument) {
         Bundle bundle = new Bundle();
         bundle.putString(ARGUMENT, argument);
