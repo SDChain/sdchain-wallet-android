@@ -62,6 +62,7 @@ public class ARouterPath {
     public static final String KeyActivity = MINEGROUP + "/KeyActivity";
     public static final String MsgDetailActivity = MINEGROUP + "/MsgDetailActivity";
     public static final String SetLoginPwdActivity = MINEGROUP + "/SetLoginPwdActivity";
+    public static final String InfoDetailActivity = MINEGROUP + "/InfoDetailActivity";
 
 
     //interceptor

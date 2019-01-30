@@ -580,5 +580,18 @@
     <string name="info699"></string>
     <string name="info700"></string>
 
+    <string name="key000274">资讯</string>
+    <string name="key000275">详情</string>
+    <string name="key000276">阅读量</string>
+    <string name="key000277">刚刚</string>
+    <string name="key000278">分钟前</string>
+    <string name="key000279">小时前</string>
+    <string name="key000280">天前</string>
+    <string name="key000281">月前</string>
+    <string name="key000282">年前</string>
+    <string name="key000287">注：授信后才能接收转账，授信需要输入钱包密码；\n钱包不对任何二级资产发行方进行背书，请为自己的授信行为负责。</string>
+
+
+
 
 </resources>

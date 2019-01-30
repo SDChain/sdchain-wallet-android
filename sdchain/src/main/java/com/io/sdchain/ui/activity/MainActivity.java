@@ -22,6 +22,7 @@ import com.io.sdchain.mvp.view.MainActivityView;
 import com.io.sdchain.ui.fragment.AssetFragment;
 import com.io.sdchain.ui.fragment.MineFragment;
 import com.io.sdchain.ui.fragment.PayFragment;
+import com.io.sdchain.ui.fragment.QuotesFragment;
 import com.io.sdchain.utils.CleanUtils;
 import com.orhanobut.logger.Logger;
 
@@ -72,6 +73,7 @@ public final class MainActivity extends BaseActivity implements MainActivityView
         ArrayList<Fragment> fragments = new ArrayList<Fragment>();
         fragments.add(AssetFragment.newInstance("asset"));
         fragments.add(PayFragment.newInstance("pay"));
+        fragments.add(new QuotesFragment());
         fragments.add(MineFragment.newInstance("mine"));
         return fragments;
     }
@@ -80,19 +82,18 @@ public final class MainActivity extends BaseActivity implements MainActivityView
 //        bottomNavigationBar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC);
         bottomNavigationBar
                 .addItem(new BottomNavigationItem(R.mipmap.ic_assets_choosed, getString(R.string.info1))
-                                .setInactiveIconResource(R.mipmap.ic_assets)
-                                .setActiveColorResource(R.color.bottom_text_color)
-//                        .setInActiveColorResource(R.color.colorAccent)
+                        .setInactiveIconResource(R.mipmap.ic_assets)
+                        .setActiveColorResource(R.color.bottom_text_color)
                 )
                 .addItem(new BottomNavigationItem(R.mipmap.ic_pay_choosed, getString(R.string.info2))
-                                .setInactiveIconResource(R.mipmap.ic_pay)
-                                .setActiveColorResource(R.color.bottom_text_color)
-//                        .setInActiveColorResource(R.color.colorAccent)
-                )
+                        .setInactiveIconResource(R.mipmap.ic_pay)
+                        .setActiveColorResource(R.color.bottom_text_color)
+                ).addItem(new BottomNavigationItem(R.mipmap.ic_home_new_choosed, getString(R.string.key000274))
+                .setInactiveIconResource(R.mipmap.ic_home_new)
+                .setActiveColorResource(R.color.bottom_text_color))
                 .addItem(new BottomNavigationItem(R.mipmap.ic_mine_choosed, getString(R.string.info4))
-                                .setInactiveIconResource(R.mipmap.ic_mine)
-                                .setActiveColorResource(R.color.bottom_text_color)
-//                        .setInActiveColorResource(R.color.colorAccent)
+                        .setInactiveIconResource(R.mipmap.ic_mine)
+                        .setActiveColorResource(R.color.bottom_text_color)
                 )
                 .setFirstSelectedPosition(0)
                 .setMode(BottomNavigationBar.MODE_FIXED)

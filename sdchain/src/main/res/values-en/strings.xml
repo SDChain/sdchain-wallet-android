@@ -581,4 +581,16 @@
     <string name="info700"></string>
 
 
+    <string name="key000274">News</string>
+    <string name="key000275">Details</string>
+    <string name="key000276">\u0020Reading volume</string>
+    <string name="key000277">\u0020a moment ago</string>
+    <string name="key000278">\u0020minute ago</string>
+    <string name="key000279">\u0020hours ago</string>
+    <string name="key000280">\u0020day ago</string>
+    <string name="key000281">\u0020month ago</string>
+    <string name="key000282">\u0020year ago</string>
+    <string name="key000287">Enter the password for credit before receiving the transfer.\nThe wallet does not endorse any secondary asset issuer.</string>
+
+
 </resources>

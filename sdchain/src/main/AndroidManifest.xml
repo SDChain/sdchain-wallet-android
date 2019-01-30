@@ -166,10 +166,13 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.activity.CreditGrantActivity"
+            android:name="com.io.sdchain.ui.activity.CreditGrantActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.CreditGrantRecordActivity"
+            android:name="com.io.sdchain.ui.activity.CreditGrantRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.io.sdchain.ui.activity.InfoDetailActivity"
             android:screenOrientation="portrait" />
 
     </application>

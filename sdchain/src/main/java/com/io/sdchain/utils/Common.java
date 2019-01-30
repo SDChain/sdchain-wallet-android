@@ -290,4 +290,22 @@ public final class Common {
         return statusBarHeight;
     }
 
+    public static String getTimeDate(long time,Context context){
+        // 101156000
+        time=time/1000; // ms->s
+        if(time/60 < 10 ){
+            return  context.getResources().getString(R.string.key000277);
+        }else if(time/60 < 60){
+            return  (time/60)+context.getString(R.string.key000278);
+        }else if(time/3600 < 24) {
+            return  (time/3600)+context.getString(R.string.key000279);
+        }else if(time/3600/24< 30) {
+            return  (time/3600/24)+context.getString(R.string.key000280)   ;
+        }else if(time/3600/24/30<12){
+            return  (time/3600/24/30)+context.getString(R.string.key000281);
+        }else {
+            return  (time/3600/24/30/12)+context.getString(R.string.key000282);
+        }
+    }
+
 }

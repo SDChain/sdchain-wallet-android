@@ -579,5 +579,18 @@
     <string name="info699"></string>
     <string name="info700"></string>
 
+    <string name="key000274">資訊</string>
+    <string name="key000275">詳情</string>
+    <string name="key000276">閱讀量</string>
+    <string name="key000277">剛剛</string>
+    <string name="key000278">分鐘前</string>
+    <string name="key000279">小時前</string>
+    <string name="key000280">天前</string>
+    <string name="key000281">月前</string>
+    <string name="key000282">年前</string>
+    <string name="key000287">注：授信後才能接收轉賬，授信需要輸入錢包密碼；\n錢包不對任何二級資産發行方進行背書，請爲自己的授信行爲負責。</string>
+
+
+
 
 </resources>

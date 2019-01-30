@@ -6,6 +6,7 @@ import com.io.sdchain.R;
 import com.io.sdchain.base.BasePresenter;
 import com.io.sdchain.bean.CodeBean;
 import com.io.sdchain.bean.CreditGrantBean;
+import com.io.sdchain.bean.InfoBean;
 import com.io.sdchain.common.API;
 import com.io.sdchain.mvp.view.CreditGrantView;
 import com.io.sdchain.net.ResponseCallBack;
@@ -31,6 +32,54 @@ public final class CreditGrantPresenter extends BasePresenter<CreditGrantView> {
     public void closeDisposable() {
 
     }
+
+    /**
+     * get news list
+     */
+    public void getInfoList(int page,Context context,boolean isShow) {
+
+        HashMap<String, String> map = new HashMap<String, String>();
+        map.put("page", "" + page);
+        getData(API.NEWSGETLIST, map, true, new ResponseCallBack<List<InfoBean>>(context) {
+            @Override
+            public void onSuccessResponse(List<InfoBean> data, String msg) {
+                if (getView() != null) {
+                    getView().onSuccess(data, msg);
+                }
+            }
+
+            @Override
+            public void onFailResponse(String msg) {
+                if (getView() != null) {
+                    getView().onFailed(msg);
+                }
+            }
+        }, null, context.getString(R.string.info188), isShow, context);
+    }
+    /**
+     * get news detail
+     */
+    public void getInfoDetail(String newsId, Context context,boolean isShow) {
+
+        HashMap<String, String> map = new HashMap<String, String>();
+        map.put("newsId", newsId);
+        getData(API.NEWSGETNEWS, map, true, new ResponseCallBack<InfoBean>(context) {
+            @Override
+            public void onSuccessResponse(InfoBean data, String msg) {
+                if (getView() != null) {
+                    getView().onSuccess(data, msg);
+                }
+            }
+
+            @Override
+            public void onFailResponse(String msg) {
+                if (getView() != null) {
+                    getView().onFailed(msg);
+                }
+            }
+        }, null, context.getString(R.string.info188), isShow, context);
+    }
+
 
     /**
      * get trust list

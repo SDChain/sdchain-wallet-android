@@ -235,4 +235,13 @@ public class API {
      */
     public static final String CANCELTRUSTLINE = BASEURL + "resSDnWalt/payment/cancelTrustline";
 
+    /**
+     * news
+     */
+    public static final String NEWSGETLIST = BASEURL + "resSDnWalt/news/getList";
+    /**
+     * News  Detail
+     */
+    public static final String NEWSGETNEWS = BASEURL + "resSDnWalt/news/getNews";
+
 }
